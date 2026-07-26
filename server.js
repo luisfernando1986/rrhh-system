@@ -38,7 +38,7 @@ app.use((req, res, next) => {
 
 });
 app.use(session({
-    secret: 'rrhh_secret_2026',
+    secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: false
 }));

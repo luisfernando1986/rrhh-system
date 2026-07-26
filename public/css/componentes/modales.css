@@ -1,0 +1,59 @@
+/*==================================================
+=              MODALES DEL SISTEMA
+==================================================*/
+
+.modal{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.45);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:1000;
+
+}
+
+.modalContenido{
+
+    width:90%;
+
+    max-width:650px;
+
+    background:white;
+
+    border-radius:12px;
+
+    padding:25px;
+
+    box-shadow:0 15px 30px rgba(0,0,0,.25);
+
+    animation:modalEntrada .25s ease;
+
+}
+
+@keyframes modalEntrada{
+
+    from{
+
+        transform:translateY(-20px);
+
+        opacity:0;
+
+    }
+
+    to{
+
+        transform:translateY(0);
+
+        opacity:1;
+
+    }
+
+}

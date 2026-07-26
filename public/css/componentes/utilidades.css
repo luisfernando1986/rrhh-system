@@ -1,0 +1,121 @@
+/*==================================================
+=              UTILIDADES DEL SISTEMA
+==================================================*/
+
+/*==============================
+ALINEACIÓN
+==============================*/
+
+.text-center{
+    text-align:center;
+}
+
+.text-left{
+    text-align:left;
+}
+
+.text-right{
+    text-align:right;
+}
+
+/*==============================
+DISPLAY
+==============================*/
+
+.d-none{
+    display:none;
+}
+
+.d-block{
+    display:block;
+}
+
+.d-flex{
+    display:flex;
+}
+
+.d-grid{
+    display:grid;
+}
+
+/*==============================
+JUSTIFY
+==============================*/
+
+.justify-center{
+    justify-content:center;
+}
+
+.justify-between{
+    justify-content:space-between;
+}
+
+.justify-end{
+    justify-content:flex-end;
+}
+
+/*==============================
+ALIGN
+==============================*/
+
+.align-center{
+    align-items:center;
+}
+
+/*==============================
+ANCHO
+==============================*/
+
+.w-100{
+    width:100%;
+}
+
+.w-auto{
+    width:auto;
+}
+
+/*==============================
+MÁRGENES
+==============================*/
+
+.mt-10{margin-top:10px;}
+.mt-20{margin-top:20px;}
+.mt-30{margin-top:30px;}
+
+.mb-10{margin-bottom:10px;}
+.mb-20{margin-bottom:20px;}
+.mb-30{margin-bottom:30px;}
+
+.ml-10{margin-left:10px;}
+.ml-20{margin-left:20px;}
+
+.mr-10{margin-right:10px;}
+.mr-20{margin-right:20px;}
+
+/*==============================
+PADDING
+==============================*/
+
+.p-10{padding:10px;}
+.p-15{padding:15px;}
+.p-20{padding:20px;}
+
+/*==============================
+CURSOR
+==============================*/
+
+.pointer{
+    cursor:pointer;
+}
+
+/*==============================
+SOMBRAS
+==============================*/
+
+.shadow{
+    box-shadow:var(--sombra-card);
+}
+
+.shadow-hover:hover{
+    box-shadow:var(--sombra-hover);
+}

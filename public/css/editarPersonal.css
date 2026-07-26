@@ -1,0 +1,192 @@
+/*==================================================
+            EDITAR PERSONAL
+==================================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:Arial,Helvetica,sans-serif;
+    background:#eef3f8;
+
+}
+
+body::before{
+
+    content:"";
+    position:fixed;
+    inset:0;
+    background:url("/images/escudo.jpeg") center no-repeat;
+    background-size:550px;
+    opacity:.06;
+    z-index:-1;
+
+}
+
+.logoUnidad{
+
+    position:fixed;
+    top:20px;
+    right:20px;
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    overflow:hidden;
+    border:4px solid #1f4e79;
+    background:white;
+
+}
+
+.logoUnidad img{
+
+    width:100%;
+    height:100%;
+    object-fit:cover;
+
+}
+
+.contenedor{
+
+    width:95%;
+    max-width:1450px;
+    margin:30px auto;
+
+}
+
+.titulo{
+
+    text-align:center;
+    color:#1f4e79;
+    margin-bottom:30px;
+    font-size:36px;
+
+}
+
+form{
+
+    background:white;
+    border-radius:15px;
+    padding:35px;
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+
+}
+
+.fila{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+    margin-bottom:20px;
+
+}
+
+.grupo{
+
+    display:flex;
+    flex-direction:column;
+
+}
+
+label{
+
+    font-weight:bold;
+    color:#1f4e79;
+    margin-bottom:8px;
+
+}
+
+input,
+select{
+
+    height:45px;
+    padding:10px 14px;
+    border:1px solid #cfd8e3;
+    border-radius:8px;
+    font-size:15px;
+    transition:.25s;
+
+}
+
+input:focus,
+select:focus{
+
+    outline:none;
+    border-color:#1f4e79;
+    box-shadow:0 0 6px rgba(31,78,121,.30);
+
+}
+
+.botones{
+
+    margin-top:35px;
+    display:flex;
+    justify-content:center;
+
+}
+
+.botones button{
+
+    background:#1f4e79;
+    color:white;
+    border:none;
+    border-radius:8px;
+    padding:14px 35px;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.25s;
+
+}
+
+.botones button:hover{
+
+    background:#163754;
+    transform:translateY(-2px);
+
+}
+
+@media(max-width:768px){
+
+    .contenedor{
+
+        width:98%;
+        margin:15px auto;
+
+    }
+
+    form{
+
+        padding:20px;
+
+    }
+
+    .fila{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .logoUnidad{
+
+        width:70px;
+        height:70px;
+
+    }
+
+    .titulo{
+
+        font-size:28px;
+
+    }
+
+    .botones button{
+
+        width:100%;
+
+    }
+
+}

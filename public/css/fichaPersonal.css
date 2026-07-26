@@ -1,0 +1,365 @@
+/*==================================================
+                FICHA PERSONAL
+==================================================*/
+
+body{
+
+    font-family:Arial,Helvetica,sans-serif;
+    background:#eef3f8;
+    margin:0;
+
+}
+
+.contenedor{
+
+    width:95%;
+    max-width:1400px;
+    margin:auto;
+    padding:30px;
+
+}
+
+/*=====================================
+ENCABEZADO
+=====================================*/
+
+.encabezado{
+
+    background:linear-gradient(
+        135deg,
+        #123b68,
+        #1f4e79,
+        #295f92
+    );
+
+    color:white;
+
+    border-radius:15px;
+
+    padding:35px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.25);
+
+    margin-bottom:30px;
+
+}
+
+.encabezado h1{
+
+    color:white;
+
+    text-align:center;
+
+    font-size:42px;
+
+    letter-spacing:2px;
+
+    margin-bottom:35px;
+
+    text-shadow:0 3px 8px rgba(0,0,0,.35);
+
+}
+
+/*=====================================
+CABECERA
+=====================================*/
+
+.cabeceraFicha{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:40px;
+
+}
+
+.datosCabecera{
+
+    flex:1;
+
+}
+
+.datosCabecera{
+
+    flex:1;
+
+}
+
+.datosCabecera h2{
+
+    margin:0;
+    color:#ffffff;
+    font-size:34px;
+    font-weight:700;
+    line-height:1.3;
+    text-shadow:0 2px 6px rgba(0,0,0,.35);
+
+}
+
+.datosCabecera h3{
+
+    margin-top:15px;
+    color:#ffffff;
+    font-size:24px;
+    font-weight:600;
+    text-shadow:0 2px 6px rgba(0,0,0,.35);
+
+}
+
+.datosCabecera p{
+
+    color:#ffffff;
+    font-size:18px;
+    margin:10px 0;
+    text-shadow:0 2px 6px rgba(0,0,0,.35);
+
+}
+
+.fotoCabecera{
+
+    width:210px;
+
+}
+
+.fotoPersonal{
+
+    width:100%;
+    border-radius:12px;
+    border:5px solid #1f4e79;
+    object-fit:cover;
+
+}
+
+/*=====================================
+BOTONES
+=====================================*/
+
+.acciones{
+
+    display:flex;
+    justify-content:flex-end;
+    gap:15px;
+    margin-bottom:30px;
+
+}
+
+.btnAccion,
+.btnEditar{
+
+    background:#0d6efd;
+
+    color:white;
+
+    border:none;
+
+    padding:12px 28px;
+
+    border-radius:8px;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.btnEditar:hover{
+
+    background:#0b5ed7;
+
+    transform:translateY(-2px);
+
+}
+
+.btnAccion:hover,
+.btnEditar:hover{
+
+    background:#163754;
+
+}
+
+/*=====================================
+SECCIONES
+=====================================*/
+
+.seccion{
+
+    background:white;
+    margin-bottom:25px;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 6px 16px rgba(0,0,0,.10);
+
+}
+
+.seccion h2{
+
+    margin-top:0;
+    margin-bottom:20px;
+    color:#1f4e79;
+    border-bottom:2px solid #dfe8f1;
+    padding-bottom:10px;
+
+}
+
+.seccion p{
+
+    margin:12px 0;
+    line-height:1.7;
+    color:#111;
+    font-size:17px;
+    font-weight:500;
+
+}
+
+.seccion strong{
+
+    color:#0d3b66;
+    font-size:17px;
+    font-weight:700;
+
+}
+
+/*=====================================
+TABLAS
+=====================================*/
+
+table{
+
+    width:100%;
+    border-collapse:collapse;
+    margin-top:15px;
+
+}
+
+thead{
+
+    background:#1f4e79;
+    color:white;
+
+}
+
+th{
+
+    padding:12px;
+
+}
+
+td{
+
+    padding:12px;
+    border-bottom:1px solid #e5e5e5;
+
+}
+
+tbody tr:hover{
+
+    background:#f4f8fb;
+
+}
+
+/*=====================================
+LISTAS
+=====================================*/
+
+ul{
+
+    margin-left:20px;
+
+}
+
+li{
+
+    margin:8px 0;
+
+}
+
+/*=====================================
+RESPONSIVE
+=====================================*/
+@media(max-width:900px){
+
+.contenedor{
+
+    width:100%;
+    padding:15px;
+
+}
+
+.encabezado{
+
+    padding:20px;
+
+}
+
+.cabeceraFicha{
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
+.fotoCabecera{
+
+    width:170px;
+
+}
+
+.datosCabecera h2{
+
+    font-size:24px;
+
+}
+
+.datosCabecera h3{
+
+    font-size:18px;
+
+}
+
+.acciones{
+
+    flex-direction:column;
+
+}
+
+.btnAccion,
+.btnEditar{
+
+    width:100%;
+
+}
+
+.seccion{
+
+    padding:18px;
+
+}
+
+.seccion h2{
+
+    font-size:20px;
+
+}
+
+.seccion p{
+
+    font-size:15px;
+
+}
+
+table{
+
+    display:block;
+
+    overflow-x:auto;
+
+    white-space:nowrap;
+
+}
+
+}

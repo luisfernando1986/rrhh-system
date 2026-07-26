@@ -1,0 +1,334 @@
+/*==================================================
+=              MÓDULO LICENCIAS
+==================================================*/
+
+
+/*=========================================
+DASHBOARD LICENCIAS
+=========================================*/
+
+.dashboard-licencias{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+
+    gap:20px;
+
+    margin-bottom:30px;
+
+}
+
+
+
+/*=========================================
+CARD LICENCIA
+=========================================*/
+
+
+.card-licencia{
+
+    border-top:6px solid var(--color-primario);
+
+}
+
+
+.card-licencia h3{
+
+    font-size:16px;
+
+    color:#666;
+
+    text-transform:uppercase;
+
+    margin-bottom:15px;
+
+}
+
+
+.card-licencia p{
+
+    font-size:32px;
+
+    font-weight:bold;
+
+    text-align:center;
+
+    color:var(--color-primario);
+
+}
+
+
+
+/*=========================================
+RESUMEN POR TIPO
+=========================================*/
+
+
+#licenciasPorTipo{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+
+    margin-top:15px;
+
+}
+
+
+
+.badge-tipo{
+
+    padding:8px 12px;
+
+    background:#e8f1fb;
+
+    border-radius:var(--radio);
+
+    font-size:14px;
+
+}
+
+
+
+/*=========================================
+TABLA LICENCIAS
+=========================================*/
+
+
+#tablaLicencias{
+
+    min-width:1000px;
+
+}
+
+
+
+#tablaLicencias th,
+
+#tablaLicencias td{
+
+    text-align:center;
+
+    white-space:nowrap;
+
+}
+
+
+
+/*=========================================
+FORMULARIO LICENCIA
+=========================================*/
+
+
+.formularioLicencia{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+
+
+/*=========================================
+RESPONSIVE
+=========================================*/
+
+
+@media(max-width:768px){
+
+
+    .dashboard-licencias{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+}
+
+/*=========================================
+TABLERO DE ESTADÍSTICAS
+=========================================*/
+
+.dashboard-licencias{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+
+    gap:20px;
+
+    margin:25px 0;
+
+}
+
+
+/*=========================================
+TARJETAS
+=========================================*/
+
+.card-licencia{
+
+    background:white;
+
+    border-radius:12px;
+
+    padding:22px;
+
+    text-align:center;
+
+    box-shadow:var(--sombra-card);
+
+    border-top:5px solid var(--color-primario);
+
+    transition:.25s;
+
+}
+
+
+.card-licencia:hover{
+
+    transform:translateY(-4px);
+
+}
+
+
+/*=========================================
+TÍTULO
+=========================================*/
+
+.card-licencia h3{
+
+    color:var(--color-primario);
+
+    margin-bottom:12px;
+
+}
+
+
+/*=========================================
+NÚMEROS
+=========================================*/
+
+.card-licencia p{
+
+    font-size:34px;
+
+    font-weight:bold;
+
+}
+
+
+/*=========================================
+TIPOS
+=========================================*/
+
+#licenciasPorTipo{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:8px;
+
+    justify-content:center;
+
+}
+
+
+.badge-tipo{
+
+    background:var(--color-secundario);
+
+    color:white;
+
+    padding:6px 14px;
+
+    border-radius:20px;
+
+    font-size:14px;
+
+}
+
+
+/*=========================================
+FILTROS
+=========================================*/
+
+.filtros{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+
+    gap:15px;
+
+    margin-bottom:20px;
+
+}
+
+
+.botones-filtro{
+
+    display:flex;
+
+    gap:12px;
+
+    justify-content:center;
+
+    margin-bottom:25px;
+
+    flex-wrap:wrap;
+
+}
+
+
+.botones-filtro button{
+
+    padding:12px 22px;
+
+    border:none;
+
+    border-radius:8px;
+
+    background:var(--color-primario);
+
+    color:white;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+
+.botones-filtro button:hover{
+
+    background:var(--color-secundario);
+
+}
+
+
+/*=========================================
+RESPONSIVE
+=========================================*/
+
+@media(max-width:768px){
+
+    .dashboard-licencias{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+

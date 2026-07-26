@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>
+
+        Buscar Personal
+
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="/css/layoutInstitucional.css">
+
+    <link
+        rel="stylesheet"
+        href="/css/sistema.css">
+
+    <link
+        rel="stylesheet"
+        href="/css/personal.css">
+
+
+    </head>
+
+<body>
+    <div class="logoUnidad">
+
+        <img
+            src="/images/escudo.jpeg"
+            alt="Escudo Unidad">
+
+    </div>
+
+    <div class="contenedor">
+
+        <h1 class="titulo">
+
+            Buscar Personal
+
+        </h1>
+
+        <!-- ====================== -->
+        <!-- FORMULARIO BUSQUEDA -->
+        <!-- ====================== -->
+
+        <form
+            id="formBuscar">
+
+            <div class="fila">
+
+                <div class="grupo">
+
+                    <label>
+
+                        Buscar
+
+                    </label>
+
+                    <input
+                        type="text"
+                        id="busqueda"
+                        placeholder="CI, Nombre o Apellido">
+
+                </div>
+
+            </div>
+
+            <div class="botones">
+
+                <button
+                    type="submit"
+                    class="btnBuscar">
+
+                    Buscar
+
+                </button>
+
+            </div>
+
+        </form>
+
+        <!-- ====================== -->
+        <!-- RESULTADOS -->
+        <!-- ====================== -->
+
+        <div id="resultado">
+
+        </div>
+
+    </div>
+
+    <script src="/js/buscarPersonal.js"></script>
+    <script src="/js/dashboardButton.js"></script>
+</body>
+
+</html>

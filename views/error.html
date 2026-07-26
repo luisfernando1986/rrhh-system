@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Error</title>
+    <link rel="stylesheet" href="/css/sistema.css">
+</head>
+
+<body>
+
+<div class="contenedor">
+
+    <div class="card">
+
+        <h1 class="tituloModulo">
+            ⚠️ Error del sistema
+        </h1>
+
+        <hr class="hrSistema">
+
+        <p id="mensaje"></p>
+
+        <br>
+
+        <a href="/login" class="btn btnVolver">
+            Volver al login
+        </a>
+
+    </div>
+
+</div>
+
+<script>
+    const params = new URLSearchParams(window.location.search);
+    const msg = params.get("msg");
+
+    document.getElementById("mensaje").innerText = msg || "Error desconocido";
+</script>
+
+</body>
+</html>

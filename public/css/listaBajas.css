@@ -1,0 +1,1222 @@
+/*==================================================
+            LISTA DE BAJAS MÉDICAS
+==================================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:Arial,Helvetica,sans-serif;
+    background:#eef3f8;
+    color:#1f2937;
+
+}
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    background:url("/images/escudo.jpeg")
+    center center
+    no-repeat;
+
+    background-size:550px;
+
+    opacity:.05;
+
+    z-index:-1;
+
+}
+
+.logoUnidad{
+
+    position:fixed;
+
+    top:20px;
+
+    right:20px;
+
+    width:90px;
+
+    height:90px;
+
+    border-radius:50%;
+
+    overflow:hidden;
+
+    background:white;
+
+    border:4px solid #1f4e79;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.20);
+
+}
+
+.logoUnidad img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+.contenedor{
+
+    width:95%;
+
+    max-width:1450px;
+
+    margin:30px auto;
+
+}
+
+h1{
+
+    text-align:center;
+
+    color:#1f4e79;
+
+    font-size:36px;
+
+    margin-bottom:10px;
+
+}
+
+.subtitulo{
+
+    text-align:center;
+
+    font-size:17px;
+
+    margin-bottom:30px;
+
+    color:#555;
+
+}
+
+/*==================================================
+PANEL SUPERIOR
+==================================================*/
+
+#panelResumenGeneral{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:20px;
+
+    margin:35px 0;
+
+}
+
+.cardGeneral{
+
+    background:white;
+
+    border-left:6px solid #1f4e79;
+
+    border-radius:12px;
+
+    padding:25px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
+
+    transition:.25s;
+
+}
+
+.cardGeneral:hover{
+
+    transform:translateY(-4px);
+
+}
+
+.cardGeneral h3{
+
+    color:#555;
+
+    margin-bottom:12px;
+
+}
+
+.cardGeneral h2{
+
+    color:#1f4e79;
+
+    font-size:34px;
+
+}
+
+/*==================================================
+BUSCADOR
+==================================================*/
+
+#buscarPersonal{
+
+    width:100%;
+
+    padding:14px 18px;
+
+    border:1px solid #ccd5df;
+
+    border-radius:10px;
+
+    font-size:16px;
+
+    margin-bottom:25px;
+
+}
+
+#buscarPersonal:focus{
+
+    outline:none;
+
+    border-color:#1f4e79;
+
+    box-shadow:0 0 8px rgba(31,78,121,.30);
+
+}
+
+/*==================================================
+FILTROS
+==================================================*/
+
+#filtrosEstado{
+
+    display:flex;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+    margin-bottom:30px;
+
+}
+
+.filtro{
+
+    border:none;
+
+    border-radius:8px;
+
+    padding:12px 22px;
+
+    cursor:pointer;
+
+    font-weight:bold;
+
+    background:#d7dde5;
+
+    transition:.25s;
+
+}
+
+.filtro:hover{
+
+    transform:translateY(-2px);
+
+}
+
+.filtro.activo{
+
+    background:#1f4e79;
+
+    color:white;
+
+}
+
+/*==================================================
+LISTADO
+==================================================*/
+
+.contenedorPersonal{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fill,minmax(330px,1fr));
+
+    gap:25px;
+
+}
+
+/*==================================================
+TARJETAS DEL PERSONAL
+==================================================*/
+
+.cardPersonal{
+
+    background:white;
+
+    border-radius:15px;
+
+    padding:22px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.10);
+
+    transition:.25s;
+
+}
+
+.cardPersonal:hover{
+
+    transform:translateY(-4px);
+
+}
+
+.cardPersonal img{
+
+    width:90px;
+
+    height:110px;
+
+    object-fit:cover;
+
+    border-radius:10px;
+
+    border:3px solid #1f4e79;
+
+    margin-bottom:15px;
+
+}
+
+.cardPersonal h3{
+
+    color:#1f4e79;
+
+    margin-bottom:12px;
+
+}
+
+.cardPersonal p{
+
+    margin:8px 0;
+
+    font-size:15px;
+
+}
+
+/*==================================================
+BOTONES
+==================================================*/
+
+.cardPersonal button{
+
+    margin-top:15px;
+
+    width:100%;
+
+    border:none;
+
+    background:#1f4e79;
+
+    color:white;
+
+    border-radius:8px;
+
+    padding:12px;
+
+    cursor:pointer;
+
+    font-weight:bold;
+
+    transition:.25s;
+
+}
+
+.cardPersonal button:hover{
+
+    background:#173758;
+
+}
+
+/*==================================================
+RESPONSIVE
+==================================================*/
+
+@media(max-width:768px){
+
+    .contenedor{
+
+        width:98%;
+
+    }
+
+    h1{
+
+        font-size:28px;
+
+    }
+
+    #panelResumenGeneral{
+
+        grid-template-columns:1fr;
+
+    }
+
+    #filtrosEstado{
+
+        flex-direction:column;
+
+    }
+
+    .filtro{
+
+        width:100%;
+
+    }
+
+    .contenedorPersonal{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .logoUnidad{
+
+        width:70px;
+
+        height:70px;
+
+    }
+
+}/* =========================================================
+   BAJAS MÉDICAS
+   DISEÑO INDEPENDIENTE DEL MÓDULO
+   ========================================================= */
+
+
+/* =========================================================
+   BASE
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #eef3f8;
+    color: #263238;
+}
+
+
+/* =========================================================
+   CONTENEDOR
+   ========================================================= */
+
+.contenedor {
+    width: min(94%, 1450px);
+    margin: 0 auto;
+    padding: 35px 20px 50px;
+}
+
+
+/* =========================================================
+   TÍTULO PRINCIPAL
+   ========================================================= */
+
+.contenedor > h1 {
+    margin: 0 0 10px;
+    padding: 22px 25px;
+
+    background: linear-gradient(
+        135deg,
+        #0d3b66,
+        #1f5f8b
+    );
+
+    color: #ffffff;
+
+    border-radius: 14px;
+
+    text-align: center;
+
+    font-size: clamp(22px, 3vw, 34px);
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    box-shadow:
+        0 8px 20px rgba(13, 59, 102, .20);
+}
+
+
+/* =========================================================
+   SUBTÍTULO
+   ========================================================= */
+
+.subtitulo {
+    margin: 20px 0;
+
+    color: #455a64;
+
+    text-align: center;
+
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   RESUMEN GENERAL
+   ========================================================= */
+
+#panelResumenGeneral {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 18px;
+
+    margin: 25px 0;
+}
+
+
+/* =========================================================
+   TARJETAS RESUMEN
+   ========================================================= */
+
+.cardGeneral {
+
+    position: relative;
+
+    background: #ffffff;
+
+    border-radius: 14px;
+
+    padding: 20px;
+
+    text-align: center;
+
+    border: 1px solid #dce5ed;
+
+    box-shadow:
+        0 6px 18px rgba(0, 0, 0, .08);
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+
+.cardGeneral:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, .12);
+}
+
+
+.cardGeneral h3 {
+
+    margin: 0 0 10px;
+
+    color: #546e7a;
+
+    font-size: 14px;
+
+    text-transform: uppercase;
+
+    letter-spacing: .5px;
+}
+
+
+.cardGeneral h2 {
+
+    margin: 0;
+
+    color: #0d3b66;
+
+    font-size: 32px;
+}
+
+
+/* =========================================================
+   BUSCADOR
+   ========================================================= */
+
+#buscarPersonal {
+
+    display: block;
+
+    width: 100%;
+
+    height: 48px;
+
+    padding: 0 18px;
+
+    margin: 0 0 20px;
+
+    background: #ffffff;
+
+    border: 1px solid #cbd5df;
+
+    border-radius: 10px;
+
+    color: #263238;
+
+    font-size: 15px;
+
+    outline: none;
+
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, .05);
+
+    transition:
+        border-color .2s ease,
+        box-shadow .2s ease;
+}
+
+
+#buscarPersonal::placeholder {
+
+    color: #78909c;
+}
+
+
+#buscarPersonal:focus {
+
+    border-color: #1f5f8b;
+
+    box-shadow:
+        0 0 0 3px rgba(31, 95, 139, .12);
+}
+
+
+/* =========================================================
+   FILTROS
+   ========================================================= */
+
+#filtrosEstado {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+
+    margin-bottom: 28px;
+}
+
+
+.filtro {
+
+    border: 1px solid #cbd5df;
+
+    background: #ffffff;
+
+    color: #455a64;
+
+    padding: 10px 18px;
+
+    border-radius: 8px;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background .2s ease,
+        color .2s ease,
+        border-color .2s ease,
+        transform .2s ease;
+}
+
+
+.filtro:hover {
+
+    transform: translateY(-1px);
+
+    border-color: #1f5f8b;
+
+    color: #1f5f8b;
+}
+
+
+.filtro.activo {
+
+    background: #1f4e79;
+
+    color: #ffffff;
+
+    border-color: #1f4e79;
+}
+
+
+/* =========================================================
+   CONTENEDOR PERSONAL
+   ========================================================= */
+
+.contenedorPersonal {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fill,
+            minmax(290px, 1fr)
+        );
+
+    gap: 22px;
+
+    align-items: stretch;
+}
+
+
+/* =========================================================
+   TARJETA PERSONAL
+   ========================================================= */
+
+.cardPersonal {
+
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    min-width: 0;
+
+    background: #ffffff;
+
+    border-radius: 16px;
+
+    padding: 0 20px 20px;
+
+    border: 1px solid #dbe4eb;
+
+    box-shadow:
+        0 7px 20px rgba(0, 0, 0, .09);
+
+    overflow: hidden;
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+
+.cardPersonal:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 13px 28px rgba(0, 0, 0, .14);
+}
+
+
+/* =========================================================
+   ENCABEZADO TARJETA
+   ========================================================= */
+
+.encabezadoCard {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    min-height: 58px;
+
+    margin: 0 -20px 15px;
+
+    padding: 0 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0d3b66,
+            #1f5f8b
+        );
+
+    color: #ffffff;
+}
+
+
+.grado {
+
+    font-size: 17px;
+
+    font-weight: 700;
+
+    letter-spacing: .3px;
+}
+
+
+/* =========================================================
+   INDICADOR DE ESTADO
+   ========================================================= */
+
+.circuloEstado {
+
+    width: 17px;
+
+    height: 17px;
+
+    border-radius: 50%;
+
+    border: 3px solid rgba(255,255,255,.85);
+
+    box-shadow:
+        0 0 0 2px rgba(255,255,255,.18);
+}
+
+
+/* =========================================================
+   ESTADOS
+   ========================================================= */
+
+.estado-verde {
+
+    background-color: #198754;
+}
+
+
+.estado-naranja {
+
+    background-color: #f59e0b;
+}
+
+
+.estado-rojo {
+
+    background-color: #dc3545;
+}
+
+
+/* =========================================================
+   ARMA
+   ========================================================= */
+
+.arma {
+
+    color: #607d8b;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    text-transform: uppercase;
+
+    margin-bottom: 5px;
+}
+
+
+/* =========================================================
+   APELLIDO
+   ========================================================= */
+
+.apellido {
+
+    margin: 0;
+
+    color: #263238;
+
+    font-size: 17px;
+
+    line-height: 1.3;
+}
+
+
+/* =========================================================
+   NOMBRE
+   ========================================================= */
+
+.nombre {
+
+    margin: 3px 0 15px;
+
+    color: #0d3b66;
+
+    font-size: 21px;
+
+    line-height: 1.25;
+}
+
+
+/* =========================================================
+   DATO CI
+   ========================================================= */
+
+.dato {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 9px 11px;
+
+    background: #f5f8fa;
+
+    border-radius: 7px;
+
+    font-size: 14px;
+
+    color: #455a64;
+}
+
+
+.tituloDato {
+
+    font-weight: 700;
+
+    color: #1f4e79;
+}
+
+
+/* =========================================================
+   SEPARADOR
+   ========================================================= */
+
+.cardPersonal hr {
+
+    width: 100%;
+
+    border: 0;
+
+    border-top: 1px solid #e1e7eb;
+
+    margin: 17px 0;
+}
+
+
+/* =========================================================
+   ESTADO MÉDICO
+   ========================================================= */
+
+.estadoTarjeta {
+
+    padding: 11px 14px;
+
+    border-radius: 8px;
+
+    margin-bottom: 15px;
+
+    color: #ffffff;
+
+    text-align: center;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: .4px;
+}
+
+
+.estadoTarjeta.estado-verde {
+
+    background: #198754;
+}
+
+
+.estadoTarjeta.estado-naranja {
+
+    background: #f59e0b;
+
+    color: #ffffff;
+}
+
+
+.estadoTarjeta.estado-rojo {
+
+    background: #dc3545;
+}
+
+
+/* =========================================================
+   ESTADÍSTICAS
+   ========================================================= */
+
+.estadisticas {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    margin-bottom: 18px;
+}
+
+
+.filaDato {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 9px 0;
+
+    border-bottom: 1px solid #edf1f4;
+
+    color: #546e7a;
+
+    font-size: 14px;
+}
+
+
+.filaDato:last-child {
+
+    border-bottom: none;
+}
+
+
+.filaDato strong {
+
+    color: #263238;
+
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   BOTÓN REGISTRAR BAJA
+   ========================================================= */
+
+.cardPersonal button {
+
+    width: 100%;
+
+    min-height: 43px;
+
+    margin-top: auto;
+
+    padding: 10px 16px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #1f4e79;
+
+    color: #ffffff;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    text-transform: uppercase;
+
+    transition:
+        background .2s ease,
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+
+.cardPersonal button:hover {
+
+    background: #163a5c;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 5px 12px rgba(31,78,121,.25);
+}
+
+
+.cardPersonal button:active {
+
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    #panelResumenGeneral {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .contenedorPersonal {
+
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(280px, 1fr)
+            );
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - CELULAR
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .contenedor {
+
+        width: 100%;
+
+        padding: 20px 12px 35px;
+    }
+
+
+    .contenedor > h1 {
+
+        padding: 18px 15px;
+
+        font-size: 22px;
+
+        border-radius: 10px;
+    }
+
+
+    #panelResumenGeneral {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 10px;
+    }
+
+
+    .cardGeneral {
+
+        padding: 15px 10px;
+
+        border-radius: 10px;
+    }
+
+
+    .cardGeneral h3 {
+
+        font-size: 11px;
+    }
+
+
+    .cardGeneral h2 {
+
+        font-size: 25px;
+    }
+
+
+    #filtrosEstado {
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 8px;
+    }
+
+
+    .filtro {
+
+        width: 100%;
+
+        padding: 10px 5px;
+
+        font-size: 11px;
+    }
+
+
+    .contenedorPersonal {
+
+        grid-template-columns: 1fr;
+
+        gap: 16px;
+    }
+
+
+    .cardPersonal {
+
+        border-radius: 12px;
+
+        padding: 0 16px 18px;
+    }
+
+
+    .encabezadoCard {
+
+        margin-left: -16px;
+
+        margin-right: -16px;
+
+        padding: 0 16px;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - CELULAR PEQUEÑO
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+    #panelResumenGeneral {
+
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    .cardGeneral h2 {
+
+        font-size: 22px;
+    }
+
+
+    #buscarPersonal {
+
+        height: 44px;
+
+        font-size: 14px;
+    }
+
+
+    .apellido {
+
+        font-size: 16px;
+    }
+
+
+    .nombre {
+
+        font-size: 19px;
+    }
+
+}

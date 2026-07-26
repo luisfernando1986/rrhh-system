@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard RRHH</title>
+
+    <link rel="stylesheet" href="/css/componentes/variables.css">
+    <link rel="stylesheet" href="/css/componentes/reset.css">
+    <link rel="stylesheet" href="/css/componentes/layout.css">
+    <link rel="stylesheet" href="/css/componentes/cards.css">
+    <link rel="stylesheet" href="/css/componentes/formularios.css">
+    <link rel="stylesheet" href="/css/componentes/tablas.css">
+    <link rel="stylesheet" href="/css/componentes/botones.css">
+    <link rel="stylesheet" href="/css/componentes/menu.css">
+    <link rel="stylesheet" href="/css/componentes/badges.css">
+    <link rel="stylesheet" href="/css/componentes/alertas.css">
+    <link rel="stylesheet" href="/css/componentes/modales.css">
+    <link rel="stylesheet" href="/css/componentes/utilidades.css">
+
+    <link rel="stylesheet" href="/css/layoutInstitucional.css">
+    <link rel="stylesheet" href="/css/dashboard.css">
+</head>
+
+<body>
+
+    <script>
+
+async function verificarSesion(){
+
+    const respuesta = await fetch('/api/auth/session');
+
+    if(respuesta.status !== 200){
+
+        location.href='/login';
+
+        return;
+
+    }
+
+    const usuario = await respuesta.json();
+
+    if(!usuario || !usuario.id){
+
+        location.href='/login';
+
+    }
+
+}
+
+verificarSesion();
+
+</script>
+    <div class="logoUnidad">
+
+        <img
+            src="/images/escudo.jpeg"
+            alt="Escudo Unidad">
+
+    </div>
+    <div class="contenedor">
+
+        <header class="encabezado">
+
+            <h1>
+                SECCIÓN I PERSONAL
+            </h1>
+
+        </header>
+
+        <main class="contenido">
+
+            <!-- ========================= -->
+            <!-- TITULO -->
+            <!-- ========================= -->
+
+            <h2>
+
+                Panel Principal de navegación
+
+            </h2>
+
+            <p>
+
+                Seleccione una opción
+
+            </p>
+
+            <!-- ========================= -->
+            <!-- BOTONES DEL SISTEMA -->
+            <!-- ========================= -->
+
+            <div class="menu-dashboard">
+                <a
+                    href="/configuracion"
+                    class="btn-menu"
+                    data-modulo="configuracion">
+
+                    Configuración del Sistema
+
+                </a>
+                <a
+                    href="/personal"
+                    class="btn-menu"
+                    data-modulo="personal">
+
+                    Registrar Personal
+
+                </a>
+
+                <a
+                    href="/buscar-personal"
+                    class="btn-menu"
+                    data-modulo="buscar">
+
+                    Buscar Personal
+
+                </a>
+                <a
+                    href="/destinos-anteriores"
+                    class="btn-menu"
+                    data-modulo="destinos">
+
+                    Destinos Anteriores del Personal
+
+                </a>
+            <a href="/licencias"
+                class="btn-menu"
+                data-modulo="licencias">
+                    Licencias
+                </a>
+            <a href="/vacaciones"
+                class="btn-menu"
+                data-modulo="vacaciones">
+                Vacaciones
+                </a>
+
+            <a
+                href="/bajas-medicas"
+                class="btn-menu"
+                data-modulo="bajas">
+
+                Bajas Médicas
+
+            </a>
+            <a
+                href="/consulta-general"
+                class="btn-menu"
+                data-modulo="consulta">
+
+                Consulta General del Personal
+
+            </a>
+            </div>
+
+            <br>
+            
+            <a
+                href="/api/auth/logout"
+                class="btn-salir">
+
+                Cerrar Sesión
+
+            </a>
+
+        </main>
+
+    </div>
+    <script>
+        async function cargarPermisosDashboard() {
+
+            const res = await fetch('/config-ui');
+            const config = await res.json();
+            const sesion = await fetch('/api/auth/session');
+
+            const usuario = await sesion.json();
+
+            const isAdmin = usuario.rol === 'admin';
+
+            const setVisible = (modulo, estado) => {
+
+                const el = document.querySelector(`[data-modulo="${modulo}"]`);
+
+                if (!el) return;
+
+                if (isAdmin) {
+
+                    el.style.display = 'inline-block';
+
+                    return;
+
+                }
+
+                el.style.display = estado ? 'inline-block' : 'none';
+
+            };
+
+            // AQUÍ PEGAS ESTO ↓↓↓
+
+            setVisible('personal', config.registroPersonal);
+
+            setVisible('buscar', config.buscarPersonal);
+
+            setVisible('destinos', config.destinos);
+
+            setVisible('vacaciones', config.vacaciones);
+
+            setVisible('licencias', config.licencias);
+
+            setVisible('bajas', config.bajas);
+
+            setVisible('consulta', config.consultaGeneral);
+
+            // Configuración solo para administradores
+            setVisible('configuracion', false);
+        }
+
+        cargarPermisosDashboard();
+        </script>
+</body>
+
+</html>

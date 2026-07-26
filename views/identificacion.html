@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>
+        Paso 2 - Información Militar
+    </title>
+
+    <!-- ========================= -->
+    <!-- HOJA DE ESTILOS -->
+    <!-- ========================= -->
+
+    <link rel="stylesheet" href="/css/sistema.css">
+    <link rel="stylesheet" href="/css/layoutInstitucional.css">
+    <link rel="stylesheet" href="/css/personal.css">
+</head>
+
+<body>
+    <div class="logoUnidad">
+
+        <img
+            src="/images/escudo.jpeg"
+            alt="Escudo Unidad">
+
+    </div>
+
+    <!-- ========================= -->
+    <!-- CONTENEDOR PRINCIPAL -->
+    <!-- ========================= -->
+
+    <div class="contenedor">
+
+        <!-- ========================= -->
+        <!-- TITULO -->
+        <!-- ========================= -->
+
+        <h1 class="titulo">
+
+            Registro de Personal
+
+        </h1>
+
+        <h3 class="paso">
+
+            Paso 2 de 6 - Información Militar
+
+        </h3>
+
+        <!-- ========================= -->
+        <!-- BARRA DE PROGRESO -->
+        <!-- ========================= -->
+
+        <div class="progreso">
+
+            <div
+                class="progreso-barra"
+                style="width:33%;">
+
+                33%
+
+            </div>
+
+        </div>
+
+        <!-- ========================= -->
+        <!-- FORMULARIO -->
+        <!-- ========================= -->
+
+        <form
+            action="/personal/paso2"
+            method="POST"
+            class="formulario">
+
+            <!-- ========================= -->
+            <!-- INFORMACIÓN MILITAR -->
+            <!-- ========================= -->
+
+            <section class="seccion">
+
+                <h2>
+
+                    Información Militar
+
+                </h2>
+
+                <!-- ========================= -->
+                <!-- FILA 1 -->
+                <!-- ========================= -->
+
+                <div class="fila">
+
+                    <div class="grupo">
+
+                        <label>
+
+                            Nº Carnet Militar
+
+                        </label>
+
+                        <input
+                            type="text"
+                            name="carnetMilitar">
+
+                    </div>
+
+                    <div class="grupo">
+
+                        <label>
+
+                            Nº Carnet COSSMIL
+
+                        </label>
+
+                        <input
+                            type="text"
+                            name="carnetCossmil">
+
+                    </div>
+
+                </div>
+
+                <!-- ========================= -->
+                <!-- FILA 2 -->
+                <!-- ========================= -->
+
+                <div class="fila">
+
+                    <!-- ========================= -->
+                    <!-- AÑO DE EGRESO -->
+                    <!-- ========================= -->
+
+                    <div class="grupo">
+
+                        <label>
+
+                            Año de Egreso
+
+                        </label>
+
+                        <input
+                            type="number"
+                            name="anioEgreso"
+                            min="1950"
+                            max="2100"
+                            required>
+
+                    </div>
+
+                    <!-- ========================= -->
+                    <!-- ANTIGÜEDAD ACTUAL -->
+                    <!-- ========================= -->
+
+                    <div class="grupo">
+
+                        <label>
+
+                            Antigüedad en el Grado
+
+                        </label>
+
+                        <input
+                            type="number"
+                            name="antiguedadGrado"
+                            min="1">
+
+                    </div>
+
+                    <div class="grupo">
+
+                        <label>
+
+                            Instituto de Egreso
+
+                        </label>
+
+                        <select
+                            name="institutoEgreso">
+
+                            <option value="">
+                                Seleccione
+                            </option>
+
+                            <option>EMSE.</option>
+
+                            <option>EMTE.</option>
+
+                            <option>EMME.</option>
+
+                            <option>COLMIL.</option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+                <!-- ========================= -->
+                <!-- FILA 3 -->
+                <!-- ========================= -->
+
+                <div class="fila">
+
+                    <div class="grupo">
+
+                        <label>
+
+                            Destino Actual
+
+                        </label>
+
+                        <input
+                            type="text"
+                            name="destinoActual">
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- ========================= -->
+            <!-- BOTÓN -->
+            <!-- ========================= -->
+
+            <div class="botones">
+
+                <button
+                    type="submit"
+                    class="btn btnSiguiente">
+
+                    Siguiente →
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>

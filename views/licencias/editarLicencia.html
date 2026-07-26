@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Editar Licencia</title>
+
+<link rel="stylesheet" href="/css/sistema.css">
+<link rel="stylesheet" href="/css/licencias.css">
+<link rel="stylesheet" href="/css/layoutInstitucional.css">
+
+</head>
+
+<body>
+
+<div class="logoUnidad">
+    <img src="/images/escudo.jpeg" alt="">
+</div>
+
+<div class="contenedor">
+
+<div class="card">
+
+<h1 class="tituloModulo">
+Editar Licencia
+</h1>
+
+<hr class="hrSistema">
+
+<form id="formEditarLicencia">
+
+<div class="campo">
+
+    <label>
+
+        Personal
+
+    </label>
+
+    <select id="personalId">
+
+    </select>
+
+</div>
+
+<div class="campo">
+
+    <label>
+
+        Tipo de Licencia
+
+    </label>
+
+    <select id="tipoLicencia">
+        </div>
+
+<option value="FALLECIMIENTO">Fallecimiento</option>
+<option value="CALAMIDAD">Calamidad</option>
+<option value="MATRIMONIO">Matrimonio</option>
+<option value="PATERNIDAD">Paternidad</option>
+<option value="MATERNIDAD">Maternidad</option>
+<option value="DJBR">DJBR</option>
+<option value="PAPANICOLAOU">Papanicolaou</option>
+<option value="MAMOGRAFIA">Mamografía</option>
+<option value="PROSTATA">Próstata</option>
+<option value="PSA">PSA</option>
+<option value="COLON">Colon</option>
+
+</select>
+
+<div class="campo">
+
+    <label>
+
+        Fecha Inicio
+
+    </label>
+
+    <input
+        type="date"
+        id="fechaInicio">
+
+</div>
+
+<div class="campo">
+
+    <label>
+
+        Días
+
+    </label>
+
+    <input
+        type="number"
+        id="dias">
+
+</div>
+
+<div class="campo">
+
+    <label>
+
+        Observación
+
+    </label>
+
+    <textarea
+        id="observacion">
+
+    </textarea>
+
+</div>
+
+<div class="filaBotones">
+
+<button
+type="submit"
+class="btn btnGuardar">
+
+Guardar Cambios
+
+</button>
+
+<button
+type="button"
+class="btn btnVolver"
+onclick="history.back()">
+
+Volver
+
+</button>
+
+</div>
+
+</form>
+
+</div>
+
+</div>
+
+<script src="/js/editarLicencia.js"></script>
+<script src="/js/dashboardButton.js"></script>
+
+</body>
+
+</html>

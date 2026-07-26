@@ -1,0 +1,140 @@
+/*==================================================
+=            FORMULARIOS DEL SISTEMA
+==================================================*/
+
+form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+/*==============================
+GRUPOS
+==============================*/
+
+.grupo{
+
+    display:flex;
+
+    flex-direction:column;
+
+    margin-bottom:15px;
+
+}
+
+/*==============================
+LABELS
+==============================*/
+
+label{
+
+    font-weight:bold;
+
+    color:var(--color-primario);
+
+    margin-bottom:6px;
+
+}
+
+/*==============================
+INPUTS
+==============================*/
+
+input,
+select,
+textarea{
+
+    width:100%;
+
+    padding:12px;
+
+    border:1px solid var(--color-borde);
+
+    border-radius:var(--radio);
+
+    background:#fff;
+
+    font-size:14px;
+
+    transition:var(--transicion);
+
+    box-sizing:border-box;
+
+}
+
+/*==============================
+FOCUS
+==============================*/
+
+input:focus,
+select:focus,
+textarea:focus{
+
+    outline:none;
+
+    border-color:var(--color-azul);
+
+    box-shadow:0 0 6px rgba(21,101,192,.25);
+
+}
+
+/*==============================
+TEXTAREA
+==============================*/
+
+textarea{
+
+    min-height:120px;
+
+    resize:vertical;
+
+}
+
+/*==================================================
+=      GRID PARA FORMULARIOS
+==================================================*/
+
+.grid2{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:20px;
+
+}
+
+.grid3{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:20px;
+
+}
+
+.grid4{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+
+    gap:20px;
+
+}
+
+
+/*==================================================
+=      MEJORA DEL GRUPO
+==================================================*/
+
+.grupo{
+
+    gap:8px;
+
+}

@@ -1,0 +1,251 @@
+/*==================================================
+=      CONFIGURACIÓN DEL SISTEMA
+==================================================*/
+
+.tituloModulo{
+
+    text-align:center;
+
+    color:#1f4e79;
+
+    font-size:34px;
+
+    margin-bottom:10px;
+
+    font-weight:bold;
+
+    letter-spacing:1px;
+
+}
+
+/*==================================================
+=      CONTENEDOR PRINCIPAL
+==================================================*/
+
+.card{
+
+    max-width:900px;
+
+    margin:35px auto;
+
+    background:#ffffff;
+
+    border-radius:18px;
+
+    padding:35px;
+
+    box-shadow:0 12px 35px rgba(0,0,0,.12);
+
+    border-top:6px solid #1f4e79;
+
+}
+
+/*==================================================
+=      TABLA
+==================================================*/
+
+.tablaConfig{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    margin-top:20px;
+
+    overflow:hidden;
+
+    border-radius:12px;
+
+}
+
+.tablaConfig thead{
+
+    background:#1f4e79;
+
+}
+
+.tablaConfig th{
+
+    color:white;
+
+    padding:16px;
+
+    font-size:16px;
+
+    text-align:left;
+
+}
+
+.tablaConfig th:last-child{
+
+    text-align:center;
+
+}
+
+.tablaConfig td{
+
+    padding:18px 16px;
+
+    border-bottom:1px solid #e6e6e6;
+
+    font-size:15px;
+
+    vertical-align:middle;
+
+}
+
+.tablaConfig td:last-child{
+
+    text-align:center;
+
+}
+
+.tablaConfig tbody tr{
+
+    transition:.25s;
+
+}
+
+.tablaConfig tbody tr:nth-child(even){
+
+    background:#f8fafc;
+
+}
+
+.tablaConfig tbody tr:hover{
+
+    background:#edf5ff;
+
+}
+
+/*==================================================
+=      SWITCH
+==================================================*/
+
+.switch{
+
+    position:relative;
+
+    display:inline-block;
+
+    width:64px;
+
+    height:34px;
+
+}
+
+.switch input{
+
+    display:none;
+
+}
+
+.slider{
+
+    position:absolute;
+
+    inset:0;
+
+    cursor:pointer;
+
+    background:#cfd8dc;
+
+    border-radius:40px;
+
+    transition:.30s;
+
+}
+
+.slider::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:26px;
+
+    height:26px;
+
+    left:4px;
+
+    top:4px;
+
+    background:white;
+
+    border-radius:50%;
+
+    box-shadow:0 2px 8px rgba(0,0,0,.25);
+
+    transition:.30s;
+
+}
+
+.switch input:checked + .slider{
+
+    background:#198754;
+
+}
+
+.switch input:checked + .slider::before{
+
+    transform:translateX(30px);
+
+}
+
+/*==================================================
+=      BOTÓN
+==================================================*/
+
+#guardarConfiguracion{
+
+    display:block;
+
+    margin:35px auto 0;
+
+    min-width:260px;
+
+    height:48px;
+
+    font-size:16px;
+
+}
+
+/*==================================================
+=      RESPONSIVE
+==================================================*/
+
+@media(max-width:768px){
+
+    .card{
+
+        padding:20px;
+
+        margin:15px;
+
+    }
+
+    .tituloModulo{
+
+        font-size:26px;
+
+    }
+
+    .tablaConfig th,
+
+    .tablaConfig td{
+
+        padding:12px;
+
+        font-size:14px;
+
+    }
+
+    #guardarConfiguracion{
+
+        width:100%;
+
+        min-width:100%;
+
+    }
+
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>
+
+Editar Vacación
+
+</title>
+
+<link
+    rel="stylesheet"
+    href="/css/sistema.css"> 
+<link
+    rel="stylesheet"
+    href="/css/vacaciones.css">
+
+    <link
+        rel="stylesheet"
+        href="/css/layoutInstitucional.css">
+</head>
+
+<body>
+    <div class="logoUnidad">
+
+        <img
+            src="/images/escudo.jpeg"
+            alt="Escudo Unidad">
+
+    </div>
+
+<div class="contenedor">
+
+    <div class="card">
+
+        <h1 class="tituloModulo">
+
+            Editar Vacación
+
+        </h1>
+
+        <hr class="hrSistema">
+
+        <div
+            id="datosRegistro"
+            class="mb20">
+
+        </div>
+
+    </div>
+
+    <div class="card">
+
+        <h2 class="subTitulo">
+
+            Datos de la Vacación
+
+        </h2>
+
+        <form id="formEditar" class="formularioVacacion">
+
+            <div class="grupo">
+                <label>Tipo de vacación</label>
+                <select id="tipo">
+                    <option value="VACACION">VACACION</option>
+                    <option value="PCV">PCV</option>
+                    <option value="COLECTIVA">COLECTIVA</option>
+                </select>
+            </div>
+
+            <div class="grid2">
+
+                <div class="grupo">
+                    <label>Fecha Inicio</label>
+                    <input type="date" id="fechaInicio">
+                </div>
+
+                <div class="grupo">
+                    <label>Fecha Fin</label>
+                    <input type="date" id="fechaFin">
+                </div>
+
+            </div>
+
+            <div class="grupo">
+                <label>Observación</label>
+                <textarea id="observacion" rows="4"></textarea>
+            </div>
+
+            <!-- 🟢 NUEVO: preview de días -->
+            <div class="infoDias">
+                <span>Días calculados:</span>
+                <strong id="previewDias">0</strong>
+            </div>
+
+            <div class="botones">
+
+                <button type="submit" class="btnGuardar">
+                    Guardar Cambios
+                </button>
+
+                <button type="button" class="btnVolver" onclick="history.back()">
+                    Volver
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+<script src="/js/services/api.js"></script>
+<script src="/js/services/vacacionService.js"></script>
+<script src="/js/utils/fechas.js"></script>
+<script src="/js/pages/editarVacacion.js"></script>
+
+
+<script src="/js/dashboardButton.js"></script>
+</body>
+
+
+</html>

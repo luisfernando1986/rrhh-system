@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+
+        Editar Personal
+
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="/css/editarPersonal.css">
+</head>
+
+<body>
+    <div class="logoUnidad">
+
+        <img
+            src="/images/escudo.jpeg"
+            alt="Escudo Unidad">
+
+    </div>
+
+    <div class="contenedor">
+
+        <h1 class="titulo">
+
+            Editar Personal
+
+        </h1>
+
+        <!-- ====================== -->
+        <!-- FORMULARIO -->
+        <!-- ====================== -->
+
+        <form id="formEditar">
+
+            <div class="fila">
+
+                <div class="grupo">
+
+                    <label>
+
+                        Grado
+
+                    </label>
+
+                    <input
+                        type="text"
+                        id="grado">
+
+                </div>
+
+                <div class="grupo">
+
+                    <label>
+
+                        Arma
+
+                    </label>
+
+                    <input
+                        type="text"
+                        id="arma">
+
+                </div>
+
+                <div class="grupo">
+
+                    <label>
+
+                        Año de Egreso
+
+                    </label>
+
+                    <input
+                        type="number"
+                        id="anioEgreso">
+
+                </div>
+
+                <div class="grupo">
+
+                    <label>
+
+                        Años de Servicio
+
+                    </label>
+
+                    <input
+                        type="number"
+                        id="aniosServicio"
+                        readonly>
+
+                </div>
+
+                <div class="grupo">
+
+                    <label>
+
+                        Antigüedad en el Grado
+
+                    </label>
+
+                    <input
+                        type="number"
+                        id="antiguedadGrado">
+
+                </div>
+
+                <div class="grupo">
+
+                    <label>
+
+                        Carnet Militar
+
+                    </label>
+
+                    <input
+                        type="text"
+                        id="carnetMilitar">
+
+                </div>
+
+                <div class="grupo">
+
+                    <label>
+
+                        Carnet COSSMIL
+
+                    </label>
+
+                    <input
+                        type="text"
+                        id="carnetCossmil">
+
+                </div>
+
+                <div class="grupo">
+
+                    <label>
+
+                        Instituto de Egreso
+
+                    </label>
+
+                    <select id="institutoEgreso">
+
+                        <option value="">
+
+                            Seleccione
+
+                        </option>
+
+                        <option value="EMSE.">
+
+                            EMSE.
+
+                        </option>
+
+                        <option value="EMTE.">
+
+                            EMTE.
+
+                        </option>
+
+                        <option value="EMME.">
+
+                            EMME.
+
+                        </option>
+
+                        <option value="COLMIL.">
+
+                            COLMIL.
+
+                        </option>
+
+                    </select>
+
+                </div>
+            </div>
+
+            <div class="fila">
+
+                <div class="grupo">
+
+                    <label>
+
+                        Nombres
+
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nombres">
+
+                </div>
+
+                <div class="grupo">
+
+                    <label>
+
+                        Apellido Paterno
+
+                    </label>
+
+                    <input
+                        type="text"
+                        id="apellidoPaterno">
+
+                </div>
+
+                <div class="grupo">
+
+                    <label>
+
+                        Apellido Materno
+
+                    </label>
+
+                    <input
+                        type="text"
+                        id="apellidoMaterno">
+
+                </div>
+
+            </div>
+
+            <div class="fila">
+
+                <div class="grupo">
+
+                    <label>
+
+                        CI
+
+                    </label>
+
+                    <input
+                        type="text"
+                        id="ci">
+
+                </div>
+
+                <div class="grupo">
+
+                    <label>
+
+                        Celular
+
+                    </label>
+
+                    <input
+                        type="text"
+                        id="celular">
+
+                </div>
+
+                <div class="grupo">
+
+                    <label>
+
+                        Correo
+
+                    </label>
+
+                    <input
+                        type="email"
+                        id="correoElectronico">
+
+                </div>
+
+            </div>
+            <!-- ====================== -->
+            <!-- CONTACTO -->
+            <!-- ====================== -->
+
+            <div class="fila">
+
+                <div class="grupo">
+
+                    <label>
+
+                        Teléfono Alterno
+
+                    </label>
+
+                    <input
+                        type="text"
+                        id="telefonoAlterno">
+
+                </div>
+
+                <div class="grupo">
+
+                    <label>
+
+                        Domicilio Actual
+
+                    </label>
+
+                    <input
+                        type="text"
+                        id="domicilioActual">
+
+                </div>
+
+                <div class="grupo">
+
+                    <label>
+
+                        Estado Civil
+
+                    </label>
+
+                    <input
+                        type="text"
+                        id="estadoCivil">
+
+                </div>
+
+            </div>
+            <!-- ====================== -->
+            <!-- DATOS FAMILIARES -->
+            <!-- ====================== -->
+
+            <div class="fila">
+
+                <div class="grupo">
+
+                    <label>
+
+                        Nombre Padre
+
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nombrePadre">
+
+                </div>
+
+                <div class="grupo">
+
+                    <label>
+
+                        Nombre Madre
+
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nombreMadre">
+
+                </div>
+
+            </div>
+            <div class="fila">
+
+            <div class="grupo">
+
+                <label>
+
+                    Nombre Esposa
+
+                </label>
+
+                <input
+                    type="text"
+                    id="nombreEsposa">
+
+            </div>
+
+            <div class="grupo">
+
+                <label>
+
+                    Domicilio de los Padres
+
+                </label>
+                <input
+                    type="text"
+                    id="domicilioPadres">
+
+            </div>
+
+                <div class="fila">
+
+                    <div class="grupo">
+
+                        <label>
+
+                            Destino Gestión Anterior
+
+                        </label>
+
+                        <input
+                            type="text"
+                            id="destinoGestionAnterior">
+
+                    </div>
+
+                    <div class="grupo">
+
+                        <label>
+
+                            Destino Hace Dos Gestiones
+
+                        </label>
+
+                        <input
+                            type="text"
+                            id="destinoHaceDosGestiones">
+
+                    </div>
+
+                </div>
+                
+
+        </div>
+            <div class="botones">
+
+                <button
+                    type="submit">
+
+                    Guardar Cambios
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+    <script src="/js/editarPersonal.js"></script>
+    <script src="/js/dashboardButton.js"></script>
+</body>
+
+</html>

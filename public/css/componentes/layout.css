@@ -1,0 +1,174 @@
+/*==================================================
+=           LAYOUT GENERAL DEL SISTEMA
+==================================================*/
+
+/*==============================
+CONTENEDOR PRINCIPAL
+==============================*/
+
+.contenedor{
+
+    width:95%;
+
+    max-width:1400px;
+
+    margin:30px auto;
+
+    padding:20px;
+
+}
+
+/*==============================
+FILAS (GRID RESPONSIVO)
+==============================*/
+
+.fila{
+
+    display:grid;
+
+    grid-template-columns:repeat(
+        auto-fit,
+        minmax(250px,1fr)
+    );
+
+    gap:20px;
+
+    margin-bottom:20px;
+
+}
+
+/*==============================
+COLUMNAS
+==============================*/
+
+.columna{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+/*==============================
+GRIDS
+==============================*/
+
+.grid2{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+
+}
+
+.grid3{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:20px;
+
+}
+
+.grid4{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:20px;
+
+}
+
+/*==============================
+ALINEACIONES
+==============================*/
+
+.centrado{
+
+    text-align:center;
+
+}
+
+.derecha{
+
+    text-align:right;
+
+}
+
+.izquierda{
+
+    text-align:left;
+
+}
+
+/*==============================
+ESPACIADOS
+==============================*/
+
+.mt10{margin-top:10px;}
+.mt20{margin-top:20px;}
+.mt30{margin-top:30px;}
+
+.mb10{margin-bottom:10px;}
+.mb20{margin-bottom:20px;}
+.mb30{margin-bottom:30px;}
+
+.pt10{padding-top:10px;}
+.pt20{padding-top:20px;}
+
+.pb10{padding-bottom:10px;}
+.pb20{padding-bottom:20px;}
+
+/*==============================
+SEPARADOR
+==============================*/
+
+.hrSistema{
+
+    border:none;
+
+    height:1px;
+
+    background:#d8dee9;
+
+    margin:20px 0;
+
+}
+
+/*==============================
+RESPONSIVE
+==============================*/
+
+@media(max-width:992px){
+
+    .grid4{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .grid2,
+    .grid3,
+    .grid4{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .contenedor{
+
+        width:98%;
+
+        padding:12px;
+
+    }
+
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Editar Baja Médica</title>
+
+    <link rel="stylesheet"
+          href="/css/bajasMedicas.css">
+           <link
+        rel="stylesheet"
+        href="/css/layoutInstitucional.css">
+</head>
+
+<body>
+    <div class="logoUnidad">
+
+        <img
+            src="/images/escudo.jpeg"
+            alt="Escudo Unidad">
+
+    </div>
+
+    <div class="contenedor">
+
+        <h1>EDITAR BAJA MÉDICA</h1>
+
+        <form id="formBaja">
+
+            <label>Entidad Médica</label>
+
+            <select id="entidadMedica">
+
+                <option value="COSSMIL">COSSMIL</option>
+
+                <option value="CNS">CNS</option>
+
+            </select>
+
+            <label>Médico</label>
+
+            <input type="text"
+                   id="medico">
+
+            <label>Especialidad</label>
+
+            <input type="text"
+                   id="especialidad">
+
+            <label>Número de Certificado</label>
+
+            <input type="text"
+                   id="numeroCertificado">
+
+            <label>Diagnóstico</label>
+
+            <textarea id="diagnostico"></textarea>
+
+            <label>Fecha Inicio</label>
+
+            <input type="date"
+                   id="fechaInicio">
+
+            <label>Fecha Fin</label>
+
+            <input type="date"
+                   id="fechaFin">
+
+            <label>Días</label>
+
+            <input type="number"
+                   id="dias"
+                   readonly>
+
+            <label>Observaciones</label>
+
+            <textarea id="observacion"></textarea>
+
+            <br><br>
+
+            <button type="submit">
+
+                Guardar Cambios
+
+            </button>
+
+        </form>
+
+    </div>
+
+    <script src="/js/editarBaja.js"></script>
+
+    <script src="/js/dashboardButton.js"></script>
+
+</body>
+
+</html>

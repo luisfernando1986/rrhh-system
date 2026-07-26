@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+
+        Control de Bajas Médicas
+
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="/css/listaBajas.css">
+</head>
+
+<body>
+    <div class="logoUnidad">
+
+        <img
+            src="/images/escudo.jpeg"
+            alt="Escudo Unidad">
+
+    </div>
+
+    <div class="contenedor">
+
+        <h1>
+
+            CONTROL DE BAJAS MÉDICAS
+
+        </h1>
+        <div id="panelResumenGeneral">
+
+            <div class="cardGeneral">
+
+                <h3>Total Personal</h3>
+
+                <h2 id="totalPersonal">0</h2>
+
+            </div>
+
+            <div class="cardGeneral">
+
+                <h3>Sin Bajas</h3>
+
+                <h2 id="sinBajas">0</h2>
+
+            </div>
+
+            <div class="cardGeneral">
+
+                <h3>En Curso</h3>
+
+                <h2 id="enCurso">0</h2>
+
+            </div>
+
+            <div class="cardGeneral">
+
+                <h3>Junta Médica</h3>
+
+                <h2 id="juntaMedica">0</h2>
+
+            </div>
+
+        </div>
+        <p class="subtitulo">
+
+            Seleccione el personal para registrar una Baja Médica.
+
+        </p>
+
+        <input
+            type="text"
+            id="buscarPersonal"
+            placeholder="Buscar por grado, nombre o CI...">
+            <div id="filtrosEstado">
+
+                <button
+                    class="filtro activo"
+                    onclick="filtrarEstado('todos')">
+
+                    TODOS
+
+                </button>
+
+                <button
+                    class="filtro"
+                    onclick="filtrarEstado('verde')">
+
+                    SIN BAJAS
+
+                </button>
+
+                <button
+                    class="filtro"
+                    onclick="filtrarEstado('naranja')">
+
+                    EN CURSO
+
+                </button>
+
+                <button
+                    class="filtro"
+                    onclick="filtrarEstado('rojo')">
+
+                    JUNTA MÉDICA
+
+                </button>
+
+            </div>
+        <div
+            id="listaPersonal"
+            class="contenedorPersonal">
+
+        </div>
+        
+    </div>
+
+    <script src="/js/listaBajas.js"></script>
+
+    <script src="/js/dashboardButton.js"></script>
+
+</body>
+
+</html>

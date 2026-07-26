@@ -1,0 +1,459 @@
+/*==================================================
+=              MÓDULO VACACIONES
+==================================================*/
+
+/*=========================================
+FILTROS
+=========================================*/
+
+.filtros{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(auto-fit,minmax(220px,1fr));
+
+    gap:18px;
+
+    margin-bottom:25px;
+
+}
+
+/*=========================================
+DASHBOARD
+=========================================*/
+
+.dashboard-vacaciones{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(auto-fit,minmax(220px,1fr));
+
+    gap:20px;
+
+    margin-bottom:30px;
+
+}
+
+.card-vacacion{
+
+    border-top:6px solid var(--color-primario);
+
+}
+
+.card-vacacion h3{
+
+    text-align:center;
+
+    color:#666;
+
+    margin-bottom:15px;
+
+    text-transform:uppercase;
+
+}
+
+.card-vacacion p{
+
+    text-align:center;
+
+    font-size:36px;
+
+    font-weight:bold;
+
+    color:var(--color-primario);
+
+}
+
+#vacacionesPorTipo{
+
+    margin-top:15px;
+
+}
+
+#vacacionesPorTipo div{
+
+    padding:8px 0;
+
+    border-bottom:1px solid var(--color-borde);
+
+}
+
+/*=========================================
+TABLA
+=========================================*/
+
+#tablaVacaciones{
+
+    min-width:1100px;
+
+}
+
+#tablaVacaciones th,
+
+#tablaVacaciones td{
+
+    white-space:nowrap;
+
+    text-align:center;
+
+}
+
+/*=========================================
+FORMULARIO
+=========================================*/
+
+.formularioVacacion{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.infoDias{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:15px;
+
+    background:#eef6ff;
+
+    border-left:5px solid var(--color-primario);
+
+    border-radius:var(--radio);
+
+    font-weight:bold;
+
+}
+
+/*=========================================
+RESPONSIVE
+=========================================*/
+
+@media(max-width:768px){
+
+    .dashboard-vacaciones{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .infoDias{
+
+        flex-direction:column;
+
+        text-align:center;
+
+        gap:10px;
+
+    }
+
+}
+
+/*=========================================
+DASHBOARD VACACIONES
+=========================================*/
+
+.dashboard-vacaciones{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+
+    gap:20px;
+
+    margin:25px 0;
+
+}
+
+
+/*=========================================
+TARJETAS
+=========================================*/
+
+.card-vacacion{
+
+    background:white;
+
+    border-radius:12px;
+
+    padding:22px;
+
+    text-align:center;
+
+    box-shadow:var(--sombra-card);
+
+    border-top:5px solid var(--color-primario);
+
+    transition:.25s;
+
+    cursor:pointer;
+
+}
+
+
+.card-vacacion:hover{
+
+    transform:translateY(-4px);
+
+}
+
+
+/*=========================================
+TÍTULO
+=========================================*/
+
+.card-vacacion h3{
+
+    color:var(--color-primario);
+
+    margin-bottom:12px;
+
+}
+
+
+/*=========================================
+NÚMEROS
+=========================================*/
+
+.card-vacacion p{
+
+    font-size:34px;
+
+    font-weight:bold;
+
+}
+
+
+/*=========================================
+RESUMEN
+=========================================*/
+
+#vacacionesPorTipo{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:8px;
+
+    justify-content:center;
+
+}
+
+
+/*=========================================
+FILTROS
+=========================================*/
+
+.filtros{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+
+    gap:18px;
+
+    margin-bottom:25px;
+
+}
+
+
+/*=========================================
+TABLA
+=========================================*/
+
+.tableResponsive{
+
+    overflow-x:auto;
+
+}
+
+
+#tablaVacaciones{
+
+    min-width:1200px;
+
+}
+
+
+/*=========================================
+RESPONSIVE
+=========================================*/
+
+@media(max-width:768px){
+
+    .dashboard-vacaciones{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+/*=========================================
+DATOS DEL MILITAR
+=========================================*/
+
+#datosPersonal{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+
+    gap:18px;
+
+    margin-bottom:25px;
+
+}
+
+
+/*=========================================
+RESUMEN
+=========================================*/
+
+#resumenVacacion{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(180px,1fr));
+
+    gap:18px;
+
+}
+
+
+/*=========================================
+CARD RESUMEN
+=========================================*/
+
+.cardResumen{
+
+    background:white;
+
+    border-radius:12px;
+
+    padding:18px;
+
+    box-shadow:var(--sombra-card);
+
+    text-align:center;
+
+    border-top:5px solid var(--color-primario);
+
+}
+
+.cardResumen h3{
+
+    color:var(--color-secundario);
+
+    margin-bottom:10px;
+
+}
+
+.cardResumen h2{
+
+    font-size:30px;
+
+    color:var(--color-primario);
+
+}
+
+.cardResumen p{
+
+    margin:0;
+
+    font-weight:bold;
+
+}
+
+/*=========================================
+EDITAR VACACIÓN
+=========================================*/
+
+.grid2{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(auto-fit,minmax(250px,1fr));
+
+    gap:20px;
+
+}
+
+.grupo{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+
+}
+
+.grupo label{
+
+    font-weight:bold;
+
+    color:var(--color-primario);
+
+}
+
+.grupo input,
+
+.grupo select,
+
+.grupo textarea{
+
+    width:100%;
+
+}
+
+.botones{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    gap:15px;
+
+    margin-top:20px;
+
+    flex-wrap:wrap;
+
+}
+
+/*=========================================
+DATOS DEL REGISTRO
+=========================================*/
+
+#datosRegistro{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(auto-fit,minmax(220px,1fr));
+
+    gap:20px;
+
+}
+
+#datosRegistro .cardResumen{
+
+    margin:0;
+
+}
+

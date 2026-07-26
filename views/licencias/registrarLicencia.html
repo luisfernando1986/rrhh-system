@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>
+
+        Registrar Licencia
+
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="/css/sistema.css">
+
+    <link
+        rel="stylesheet"
+        href="/css/licencias.css">
+
+    <link
+        rel="stylesheet"
+        href="/css/layoutInstitucional.css">
+</head>
+
+<body>
+    <div class="logoUnidad">
+
+        <img
+            src="/images/escudo.jpeg"
+            alt="Escudo Unidad">
+
+    </div>
+
+<div class="contenedor">
+
+    <div class="card">
+
+        <h1 class="tituloModulo">
+
+            Registrar Licencia
+
+        </h1>
+
+        <hr class="hrSistema">
+
+        <form
+    id="formLicencia"
+    class="formulario">
+
+            <!-- ====================== -->
+            <!-- PERSONAL -->
+            <!-- ====================== -->
+
+            <div class="campo">
+
+                <label>
+
+                    Personal
+
+                </label>
+
+                <select id="personalId">
+
+                    <option value="">
+
+                        Seleccionar
+
+                    </option>
+
+                </select>
+
+            </div>
+
+            <select id="personalId">
+
+                <option value="">
+
+                    Seleccionar
+
+                </option>
+
+            </select>
+
+            <!-- ====================== -->
+            <!-- TIPO -->
+            <!-- ====================== -->
+
+            <div class="campo">
+
+                <label>
+
+                    Tipo de Licencia
+
+                </label>
+
+                <select id="tipoLicencia">
+
+                <option value="">
+
+                    Seleccionar
+
+                </option>
+
+                <option value="FALLECIMIENTO">
+                    Fallecimiento
+                </option>
+
+                <option value="CALAMIDAD">
+                    Calamidad
+                </option>
+
+                <option value="MATRIMONIO">
+                    Matrimonio
+                </option>
+
+                <option value="PATERNIDAD">
+                    Paternidad
+                </option>
+
+                <option value="MATERNIDAD">
+                    Maternidad
+                </option>
+
+                <option value="DJBR">
+                    DJBR
+                </option>
+
+                <option value="PAPANICOLAOU">
+                    Papanicolaou
+                </option>
+
+                <option value="MAMOGRAFIA">
+                    Mamografía
+                </option>
+
+                <option value="PROSTATA">
+                    Próstata
+                </option>
+
+                <option value="PSA">
+                    PSA
+                </option>
+
+                <option value="COLON">
+                    Colon
+                </option>
+
+            </select>
+</div>
+            <!-- ====================== -->
+            <!-- FECHA -->
+            <!-- ====================== -->
+
+            <div class="campo">
+
+                <label>
+
+                    Fecha Inicio
+
+                </label>
+
+                <input
+                    type="date"
+                    id="fechaInicio">
+
+            </div>
+
+            <!-- ====================== -->
+            <!-- DÍAS -->
+            <!-- ====================== -->
+
+            <div class="campo">
+
+                <label>
+
+                    Días
+
+                </label>
+
+                <input
+                    type="number"
+                    id="dias"
+                    readonly>
+
+            </div>
+
+            <!-- ====================== -->
+            <!-- OBSERVACIÓN -->
+            <!-- ====================== -->
+
+            <div class="campo">
+
+                <label>
+
+                    Observación
+
+                </label>
+
+                <textarea
+                    id="observacion">
+
+                </textarea>
+
+            </div>
+
+            <div class="fila">
+
+                <button
+                    type="submit"
+                    class="btn btnGuardar">
+
+                    Guardar
+
+                </button>
+
+                <button
+                    type="button"
+                    class="btn btnVolver"
+                    onclick="history.back()">
+
+                    Volver
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+<script src="/js/registrarLicencia.js"></script>
+<script src="/js/dashboardButton.js"></script>
+</body>
+
+</html>

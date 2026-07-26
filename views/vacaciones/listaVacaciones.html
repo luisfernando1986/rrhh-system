@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>
+
+Vacaciones
+
+</title>
+
+<link
+    rel="stylesheet"
+    href="/css/sistema.css">
+
+    <link
+        rel="stylesheet"
+        href="/css/layoutInstitucional.css">
+    <link rel="stylesheet" href="/css/vacaciones.css">
+</head>
+
+<body>
+    <div class="logoUnidad">
+
+        <img
+            src="/images/escudo.jpeg"
+            alt="Escudo Unidad">
+
+    </div>
+
+<div class="contenedor">
+
+    <!-- ===================================== -->
+    <!-- TITULO -->
+    <!-- ===================================== -->
+
+    <div class="card">
+
+        <h1 class="tituloModulo">
+
+            Control General de Vacaciones
+
+        </h1>
+
+        <hr class="hrSistema">
+
+            <p>
+
+                Administración, programación y control anual de vacaciones del personal militar.
+
+            </p>
+    </div>
+
+    <!-- ===================================== -->
+    <!-- TABLA GENERAL -->
+    <!-- ===================================== -->
+
+    <div class="card">
+
+        <h2 class="subTitulo">
+
+            Vacaciones Programadas
+
+        </h2>
+        <!-- ===================================== -->
+        <!-- FILTROS -->
+        <!-- ===================================== -->
+
+        <div class="filtros">
+
+            <div class="campo">
+
+                <label>
+
+                    Buscar Militar
+
+                </label>
+
+                <input
+                    type="text"
+                    id="buscarNombre"
+                    placeholder="Nombre completo">
+
+            </div>
+
+           <div class="campo">
+
+                <label>
+
+                    Grado
+
+                </label>
+
+                <input
+                    type="text"
+                    id="buscarGrado"
+                    placeholder="Grado">
+
+            </div>
+
+            <div class="campo">
+
+                <label>
+
+                    Arma / Especialidad
+
+                </label>
+
+                <input
+                    type="text"
+                    id="buscarArma"
+                    placeholder="Arma o Especialidad">
+
+            </div>
+
+        </div>
+        <!-- ===================================== -->
+        <!-- ESTADISTICAS -->
+        <!-- ===================================== -->
+
+        <div class="dashboard-vacaciones">
+
+
+            <div class="card-vacacion" onclick="filtrarDashboard('TOTAL')">
+                <h3>
+
+                Total Vacaciones
+
+                </h3>
+                <p id="totalVacaciones">0</p>
+            </div>
+
+            <div class="card-vacacion" onclick="filtrarDashboard('ACTIVA')">
+                <h3>
+
+                Vacaciones Activas
+
+                </h3>
+                <p id="vacacionesActivas">0</p>
+            </div>
+
+            <div class="card-vacacion" onclick="filtrarDashboard('FINALIZADA')">
+                <h3>
+
+                Vacaciones Finalizadas
+
+                </h3>
+                <p id="vacacionesVencidas">0</p>
+            </div>
+
+            <div class="card-vacacion" onclick="filtrarDashboard('PROGRAMADA')">
+                <h3>
+
+                Vacaciones Programadas
+
+                </h3>
+                <p id="vacacionesProgramadas">0</p>
+            </div>
+
+
+            <div class="card-vacacion">
+                <h3>
+
+                Resumen
+
+                </h3>
+                <div id="vacacionesPorTipo"></div>
+            </div>
+
+
+        </div>
+
+
+        <div class="tableResponsive">
+
+            <table id="tablaVacaciones">
+
+                <thead>
+
+                    <tr>
+
+                        <th>Grado</th>
+
+                        <th>Arma/Esp.</th>
+
+                        <th>Nombres y Apellidos</th>
+
+                        <th>Gestión</th>
+
+                        <th>Años Servicio</th>
+
+                        <th>Corresponde</th>
+
+                        <th>Usados</th>
+
+                        <th>Saldo</th>
+
+                        <th>
+
+                        Acciones
+
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+                </tbody>
+
+
+            </table>
+
+        </div>
+        
+        </div>
+
+    </div>
+
+</div>
+
+<script src="/js/vacaciones.js"></script>
+<script src="/js/dashboardButton.js"></script>
+</body>
+
+</html>

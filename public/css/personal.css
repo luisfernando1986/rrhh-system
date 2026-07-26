@@ -1,0 +1,292 @@
+/*==================================================
+=            MÓDULO PERSONAL
+==================================================*/
+
+/*=========================================
+TÍTULO DEL MÓDULO
+=========================================*/
+
+.titulo{
+
+    text-align:center;
+
+    color:var(--color-primario);
+
+    font-size:30px;
+
+    margin-bottom:10px;
+
+}
+
+/*=========================================
+FORMULARIO
+=========================================*/
+
+.formulario{
+
+    background:var(--color-card);
+
+    padding:35px;
+
+    border-radius:15px;
+
+    box-shadow:var(--sombra-card);
+
+}
+
+/*=========================================
+SECCIONES
+=========================================*/
+
+.seccion{
+
+    margin-bottom:30px;
+
+    border:1px solid var(--color-borde);
+
+    border-radius:var(--radio);
+
+    padding:20px;
+
+}
+
+.seccion h2{
+
+    margin-top:0;
+
+    margin-bottom:20px;
+
+    color:var(--color-primario);
+
+}
+
+/*=========================================
+PASOS
+=========================================*/
+
+.paso{
+
+    text-align:center;
+
+    color:#666;
+
+    font-size:18px;
+
+    margin-bottom:25px;
+
+}
+
+/*=========================================
+BARRA DE PROGRESO
+=========================================*/
+
+.progreso{
+
+    width:100%;
+
+    height:25px;
+
+    background:#e0e0e0;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    margin-bottom:30px;
+
+}
+
+.progreso-barra{
+
+    height:100%;
+
+    background:var(--color-primario);
+
+    color:white;
+
+    text-align:center;
+
+    line-height:25px;
+
+    font-size:13px;
+
+    font-weight:bold;
+
+    transition:width .4s ease;
+
+}
+
+/*=========================================
+BOTÓN VER FICHA
+=========================================*/
+
+.btn-ver{
+
+    display:inline-flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-decoration:none;
+
+    min-width:180px;
+
+}
+
+/*=========================================
+RESPONSIVE
+=========================================*/
+
+@media(max-width:768px){
+
+    .formulario{
+
+        padding:20px;
+
+    }
+
+    .titulo{
+
+        font-size:24px;
+
+    }
+
+    .paso{
+
+        font-size:16px;
+
+    }
+
+}
+/*=========================================
+RESULTADOS DE BÚSQUEDA
+=========================================*/
+
+#resultado{
+
+    margin-top:30px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+#resultado .seccion{
+
+    background:#ffffff;
+
+    border-radius:16px;
+
+    box-shadow:0 8px 22px rgba(0,0,0,.12);
+
+    padding:25px;
+
+    border-left:8px solid var(--color-primario);
+
+    transition:all .25s ease;
+
+}
+
+#resultado .seccion:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 12px 28px rgba(0,0,0,.18);
+
+}
+
+#resultado h3{
+
+    margin:0 0 15px;
+
+    color:var(--color-primario);
+
+    font-size:24px;
+
+    font-weight:700;
+
+}
+
+#resultado p{
+
+    margin:7px 0;
+
+    font-size:15px;
+
+    color:#555;
+
+    line-height:1.5;
+
+}
+
+#resultado .btn-ver{
+
+    margin-top:15px;
+
+}
+/*=========================================
+TARJETA RESULTADO BUSQUEDA
+=========================================*/
+
+.tarjetaResultado{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:25px;
+
+    flex-wrap:wrap;
+
+}
+
+.tarjetaFoto{
+
+    width:110px;
+
+    height:130px;
+
+    object-fit:cover;
+
+    border-radius:10px;
+
+    border:3px solid var(--color-primario);
+
+    flex-shrink:0;
+
+}
+
+.tarjetaDatos{
+
+    flex:1;
+
+}
+
+.tarjetaDatos h3{
+
+    margin-bottom:15px;
+
+}
+
+.tarjetaDatos p{
+
+    margin:6px 0;
+
+}
+
+.tarjetaAcciones{
+
+    margin-top:18px;
+
+}
+
+.tarjetaAcciones .btn-ver{
+
+    min-width:170px;
+
+}
+

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+
+        Registrar Baja Médica
+
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="/css/bajasMedicas.css">
+
+    <link
+        rel="stylesheet"
+        href="/css/layoutInstitucional.css">
+</head>
+
+<body>
+    <div class="logoUnidad">
+
+        <img
+            src="/images/escudo.jpeg"
+            alt="Escudo Unidad">
+
+    </div>
+    <div class="contenedor">
+
+        <h1>
+
+            REGISTRO DE BAJA MÉDICA
+
+        </h1>
+
+        <!-- ========================== -->
+        <!-- DATOS DEL MILITAR -->
+        <!-- ========================== -->
+
+        <div
+            id="datosPersonal"
+            class="card">
+
+        </div>
+
+        <!-- ========================== -->
+        <!-- FORMULARIO -->
+        <!-- ========================== -->
+
+        <form id="formBaja">
+            <h3 class="tituloSeccion">
+
+                DATOS DEL CERTIFICADO MÉDICO
+
+            </h3>
+            <label>
+
+                Entidad Médica
+
+            </label>
+
+            <select id="entidadMedica">
+
+                <option value="COSSMIL">
+
+                    COSSMIL
+
+                </option>
+
+                <option value="CNS">
+
+                    CNS
+
+                </option>
+
+            </select>
+
+            <label>
+
+                Médico
+
+            </label>
+
+            <input
+                type="text"
+                id="medico">
+
+            <label>
+
+                Especialidad
+
+            </label>
+
+            <input
+                type="text"
+                id="especialidad">
+
+            <label>
+
+                Número del Certificado
+
+            </label>
+
+            <input
+                type="text"
+                id="numeroCertificado">
+            <h3 class="tituloSeccion">
+
+                DIAGNÓSTICO
+
+            </h3>
+            <label>
+
+                Diagnóstico
+
+            </label>
+
+            <textarea
+                id="diagnostico">
+
+            </textarea>
+            <h3 class="tituloSeccion">
+
+                PERÍODO DE LA BAJA
+
+            </h3>
+            <label>
+
+                Fecha Inicio
+
+            </label>
+
+            <input
+                type="date"
+                id="fechaInicio">
+
+            <label>
+
+                Fecha Fin
+
+            </label>
+
+            <input
+                type="date"
+                id="fechaFin">
+
+            <label>
+
+                Días
+
+            </label>
+
+            <input
+                type="number"
+                id="dias"
+                readonly>
+            <h3 class="tituloSeccion">
+
+                OBSERVACIONES
+
+            </h3>
+            <label>
+
+                Observaciones
+
+            </label>
+
+            <textarea
+                id="observacion">
+
+            </textarea>
+
+            <button
+                type="submit">
+
+                GUARDAR BAJA MÉDICA
+
+            </button>
+
+        </form>
+        <hr>
+
+            <h2>
+
+                RESUMEN MÉDICO
+
+            </h2>
+
+            <div id="resumenMedico">
+
+            </div>
+
+            <hr>
+
+            <!-- ===================================== -->
+            <!-- HISTORIAL DE BAJAS MÉDICAS -->
+            <!-- ===================================== -->
+
+            <h2>
+
+                HISTORIAL DE BAJAS
+
+            </h2>
+
+            <div
+                id="historialBajas"
+                class="contenedorCards">
+
+            </div>
+    </div>
+
+    <script src="/js/registrarBaja.js"></script>
+
+    <script src="/js/dashboardButton.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Iniciar Sesión</title>
+
+    <!-- ESTILO SISTEMA -->
+    <link rel="stylesheet" href="/css/sistema.css">
+</head>
+
+<body>
+
+<div class="contenedor">
+
+    <div class="card">
+
+        <h1 class="tituloModulo">
+            Sistema S. I PERSONAL - Login
+        </h1>
+
+        <hr class="hrSistema">
+        <p id="mensaje" style="color:red; font-weight:bold;"></p>
+        <form id="loginForm">
+
+            <label>Correo</label>
+            <input type="email" id="correo" required>
+
+            <label>Contraseña</label>
+            <input type="password" id="password" required>
+
+            <br><br>
+
+            <button class="btn btnGuardar" type="submit">
+                Ingresar
+            </button>
+
+        </form>
+
+        <script>
+        document.getElementById('loginForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const correo = document.getElementById('correo').value;
+            const password = document.getElementById('password').value;
+
+            const res = await fetch('/api/auth/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ correo, password })
+            });
+
+            const data = await res.json();
+
+            if (data.ok) {
+                window.location.href = '/dashboard';
+            } else {
+                document.getElementById('mensaje').innerText = data.mensaje;
+            }
+        });
+        </script>
+
+        <br>
+
+        <a href="/registro">
+            ¿No tienes cuenta? Regístrate
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>

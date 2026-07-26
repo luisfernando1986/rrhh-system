@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Paso 4 - Familia y Contacto</title>
+
+    <!-- ========================= -->
+    <!-- CSS GENERAL -->
+    <!-- ========================= -->
+
+    <link rel="stylesheet" href="/css/sistema.css">
+    <link rel="stylesheet" href="/css/layoutInstitucional.css">
+    <link rel="stylesheet" href="/css/personal.css">
+</head>
+
+<body>
+    <div class="logoUnidad">
+
+        <img
+            src="/images/escudo.jpeg"
+            alt="Escudo Unidad">
+
+    </div>
+
+<div class="contenedor">
+
+    <h1 class="titulo">Registro de Personal</h1>
+
+    <h3 class="paso">Paso 4 de 6 - Familia y Contacto</h3>
+
+    <!-- ========================= -->
+    <!-- BARRA DE PROGRESO -->
+    <!-- ========================= -->
+
+    <div class="progreso">
+
+        <div class="progreso-barra" style="width:66%;">
+            66%
+        </div>
+
+    </div>
+
+    <!-- ========================= -->
+    <!-- FORMULARIO -->
+    <!-- ========================= -->
+
+    <form action="/personal/paso4" method="POST" class="formulario">
+
+        <!-- ========================= -->
+        <!-- DATOS FAMILIARES -->
+        <!-- ========================= -->
+
+        <section class="seccion">
+
+            <h2>Datos Familiares</h2>
+
+            <div class="fila">
+
+                <div class="grupo">
+
+                    <label>Estado Civil</label>
+
+                    <select name="estadoCivil">
+
+                        <option value="">Seleccione</option>
+                        <option>Soltero</option>
+                        <option>Casado</option>
+                        <option>Viudo</option>
+                        <option>Divorciado</option>
+
+                    </select>
+
+                </div>
+
+                <div class="grupo">
+
+                    <label>Domicilio Actual</label>
+                    <input type="text" name="domicilioActual">
+
+                </div>
+
+            </div>
+
+            <div class="fila">
+
+                <div class="grupo">
+                    <label>Nombre Padre</label>
+                    <input type="text" name="nombrePadre">
+                </div>
+
+                <div class="grupo">
+                    <label>Nombre Madre</label>
+                    <input type="text" name="nombreMadre">
+                </div>
+
+                <div class="grupo">
+                    <label>Nombre Esposa</label>
+                    <input type="text" name="nombreEsposa">
+                </div>
+
+            </div>
+            <div class="fila">
+
+                <div class="grupo">
+
+                    <label>
+
+                        Domicilio de los Padres
+
+                    </label>
+
+                    <input
+                        type="text"
+                        name="domicilioPadres">
+
+                </div>
+
+            </div>
+        </section>
+        <!-- ========================= -->
+            <!-- HIJOS -->
+            <!-- ========================= -->
+
+            <section class="seccion">
+
+                <h2>
+
+                    Información de Hijos
+
+                </h2>
+
+                <div class="fila">
+
+                    <div class="grupo">
+
+                        <label>
+
+                            Número de Hijos
+
+                        </label>
+
+                        <select
+                            id="numeroHijos"
+                            name="numeroHijos">
+
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+                <!-- ========================= -->
+                <!-- AQUÍ APARECERÁN LOS HIJOS -->
+                <!-- ========================= -->
+
+                <div id="contenedorHijos">
+
+                </div>
+
+            </section>
+        <!-- ========================= -->
+        <!-- CONTACTO -->
+        <!-- ========================= -->
+
+        <section class="seccion">
+
+            <h2>Contacto</h2>
+
+            <div class="fila">
+
+                <div class="grupo">
+
+                    <label>
+
+                        Celular
+
+                    </label>
+
+                    <input
+                        type="text"
+                        name="celular">
+
+                </div>
+
+                <div class="grupo">
+
+                    <label>
+
+                        Teléfono Alterno o Fijo
+
+                    </label>
+
+                    <input
+                        type="text"
+                        name="telefonoAlterno">
+
+                </div>
+
+                <div class="grupo">
+
+                    <label>
+
+                        Correo Electrónico
+
+                    </label>
+
+                    <input
+                        type="email"
+                        name="correoElectronico">
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ========================= -->
+        <!-- REFERENCIAS -->
+        <!-- ========================= -->
+
+        <section class="seccion">
+
+            <h2>Referencias Personales</h2>
+
+            <div class="fila">
+
+                <div class="grupo">
+                    <label>Referencia 1</label>
+                    <input type="text" name="ref1_numero">
+                    <small>Parentesco: <input type="text" name="ref1_parentesco"></small>
+                </div>
+
+                <div class="grupo">
+                    <label>Referencia 2</label>
+                    <input type="text" name="ref2_numero">
+                    <small>Parentesco: <input type="text" name="ref2_parentesco"></small>
+                </div>
+
+                <div class="grupo">
+                    <label>Referencia 3</label>
+                    <input type="text" name="ref3_numero">
+                    <small>Parentesco: <input type="text" name="ref3_parentesco"></small>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ========================= -->
+        <!-- BOTÓN -->
+        <!-- ========================= -->
+
+        <div class="botones">
+
+            <button
+                type="submit"
+                class="btn btnSiguiente">
+
+                Siguiente →
+
+                </button>
+
+        </div>
+
+    </form>
+
+</div>
+<script>
+
+    // ==================================
+    // GENERAR FORMULARIOS DE HIJOS
+    // ==================================
+
+    const numeroHijos =
+        document.getElementById(
+            'numeroHijos'
+        );
+
+    const contenedor =
+        document.getElementById(
+            'contenedorHijos'
+        );
+
+    numeroHijos.addEventListener(
+        'change',
+        generarHijos
+    );
+
+    function generarHijos() {
+
+        // Limpiar contenido anterior
+
+        contenedor.innerHTML = '';
+
+        // Cantidad seleccionada
+
+        const cantidad =
+            parseInt(
+                numeroHijos.value
+            );
+
+        // Crear formularios
+
+        for (
+            let i = 1;
+            i <= cantidad;
+            i++
+        ) {
+
+            contenedor.innerHTML += `
+
+                <div class="seccion">
+
+                    <h3>
+
+                        Hijo ${i}
+
+                    </h3>
+
+                    <div class="fila">
+
+                        <div class="grupo">
+
+                            <label>
+
+                                Nombre Completo
+
+                            </label>
+
+                            <input
+                                type="text"
+                                name="hijoNombre${i}">
+
+                        </div>
+
+                        <div class="grupo">
+
+                            <label>
+
+                                Fecha Nacimiento
+
+                            </label>
+
+                            <input
+                                type="date"
+                                name="hijoFecha${i}">
+
+                        </div>
+
+                        <div class="grupo">
+
+                            <label>
+
+                                Sexo
+
+                            </label>
+
+                            <select
+                                name="hijoSexo${i}">
+
+                                <option>
+                                    Masculino
+                                </option>
+
+                                <option>
+                                    Femenino
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            `;
+
+        }
+
+    }
+
+</script>
+</body>
+</html>

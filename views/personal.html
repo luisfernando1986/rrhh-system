@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Registro de Personal</title>
+
+    <link rel="stylesheet" href="/css/sistema.css">
+    <link rel="stylesheet" href="/css/layoutInstitucional.css">
+    <link rel="stylesheet" href="/css/personal.css">
+</head>
+
+<body>
+    <div class="logoUnidad">
+
+        <img
+            src="/images/escudo.jpeg"
+            alt="Escudo Unidad">
+
+    </div>
+
+    <div class="contenedor">
+
+        <h1>
+            Registro de Personal
+        </h1>
+
+        <h3 class="paso">
+            Paso 1 de 10 - Datos Básicos
+        </h3>
+
+        <!-- ========================= -->
+<!-- BARRA DE PROGRESO -->
+<!-- ========================= -->
+
+        <div class="progreso">
+
+            <div
+                class="progreso-barra"
+                style="width:10%;">
+
+                10%
+
+            </div>
+
+        </div>
+        <form
+            action="/personal"
+            method="POST"
+            class="formulario">
+
+            <!-- ========================= -->
+            <!-- DATOS MILITARES -->
+            <!-- ========================= -->
+
+            <section class="seccion">
+
+                <h2>
+                    Datos Militares
+                </h2>
+
+                <div class="fila">
+                    <div class="grupo">
+
+                        <label>Grado</label>
+
+                        <select name="grado">
+
+                            <option value="">
+                                Seleccione
+                            </option>
+
+                            <option>SGTO. INCL.</option>
+                            <option>SGTO. 2DO.</option>
+                            <option>SGTO. 1RO.</option>
+                            <option>SOF. INCL.</option>
+                            <option>SOF. 2DO.</option>
+                            <option>SOF. 1RO.</option>
+                            <option>SOF. MY.</option>
+                            <option>SOF. MTRE.</option>
+                            <option>SBTTE.</option>
+                            <option>TTE.</option>
+                            <option>CAP.</option>
+                            <option>MY.</option>
+                            <option>TCNL.</option>
+                            <option>CNL.</option>
+                            <option>GRAL.</option>
+                            <option>ADM. I.</option>
+                            <option>ADM. II.</option>
+                            <option>ADM. III.</option>
+                            <option>ADM. IV.</option>
+                            <option>ADM. V.</option>
+                            <option>TEC. I.</option>
+                            <option>TEC. II.</option>
+                            <option>TEC. III.</option>
+                            <option>TEC. IV.</option>
+                            <option>TEC. V.</option>
+                            <option>PROF. I.</option>
+                            <option>PROF. II.</option>
+                            <option>PROF. III.</option>
+                            <option>PROF. IV.</option>
+                            <option>PROF. V.</option>
+
+                        </select>
+
+                    </div>
+                    
+                
+
+                    <div class="grupo">
+
+                        <label>Arma</label>
+
+                        <select name="arma">
+
+                            <option value="">
+                                Seleccione
+                            </option>
+
+                            <option>INF.</option>
+                            <option>CAB.</option>
+                            <option>ART.</option>
+                            <option>ING.</option>
+                            <option>COM.</option>
+                            <option>LOG.</option>
+                            <option>MOT.</option>
+                            <option>MB.</option>
+                            <option>INT.</option>
+                            <option>SAN.</option>
+                            <option>MÚS.</option>
+                            <option>TGRAFO.</option>
+                            <option>DEPSS.</option>
+                            <option>DEPSS.**</option>
+                            <option>BRIG.</option>
+                            <option>DIV.</option>
+                            <option>EJTO.</option>
+                            <option>MÉD.</option>
+                            <option>MEC.</option>
+                            <option>DENT.</option>
+                            <option>ENF.</option>
+                        </select>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========================= -->
+            <!-- DATOS PERSONALES -->
+            <!-- ========================= -->
+
+            <section class="seccion">
+
+                <h2>
+                    Datos Personales
+                </h2>
+
+                <div class="fila">
+
+                    <div class="grupo">
+
+                        <label>Nombres</label>
+
+                        <input
+                            type="text"
+                            name="nombres">
+
+                    </div>
+
+                    <div class="grupo">
+
+                        <label>Apellido Paterno</label>
+
+                        <input
+                            type="text"
+                            name="apellidoPaterno">
+
+                    </div>
+
+                    <div class="grupo">
+
+                        <label>Apellido Materno</label>
+
+                        <input
+                            type="text"
+                            name="apellidoMaterno">
+
+                    </div>
+
+                </div>
+                <div class="fila">
+
+                    <div class="grupo">
+
+                        <!-- ========================= -->
+<!-- IDENTIFICACIÓN -->
+<!-- ========================= -->
+
+                        <section class="seccion">
+
+                            <h2>
+                                Identificación
+                            </h2>
+
+                            <div class="fila">
+
+                                <!-- CI -->
+
+                                <div class="grupo">
+
+                                    <label>
+                                        Nº Cédula de Identidad
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        name="ci"
+                                        required>
+
+                                </div>
+
+                                <!-- Complemento -->
+
+                                <div class="grupo">
+
+                                    <label>
+                                        Complemento
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        name="complemento">
+
+                                </div>
+
+                                <!-- Extensión -->
+
+                                <div class="grupo">
+
+                                    <label>
+                                        Extensión
+                                    </label>
+
+                                    <select
+                                        name="extension">
+
+                                        <option value="">
+                                            Seleccione
+                                        </option>
+
+                                        <option>LP</option>
+                                        <option>CB</option>
+                                        <option>SC</option>
+                                        <option>OR</option>
+                                        <option>PT</option>
+                                        <option>TJ</option>
+                                        <option>CH</option>
+                                        <option>BE</option>
+                                        <option>PD</option>
+
+                                    </select>
+
+                                </div>
+
+                            </div>
+
+                        </section>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <div class="botones">
+
+                <button
+                    type="submit"
+                    class="btn btnSiguiente">
+
+                    Siguiente →
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+    <script src="/js/dashboardButton.js"></script>
+    <script src="/js/personal.js"></script>
+
+</body>
+
+</html>

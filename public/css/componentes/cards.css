@@ -1,0 +1,213 @@
+/*==================================================
+=              TARJETAS DEL SISTEMA
+==================================================*/
+
+/*==============================
+FORMULARIOS PRINCIPALES
+==============================*/
+
+.formulario{
+
+    background:var(--color-card);
+
+    padding:30px;
+
+    border-radius:12px;
+
+    box-shadow:var(--sombra-card);
+
+    margin-bottom:25px;
+
+}
+
+/*==============================
+SECCIONES
+==============================*/
+
+.seccion{
+
+    background:#fff;
+
+    border:1px solid var(--color-borde);
+
+    border-radius:10px;
+
+    padding:20px;
+
+    margin-bottom:25px;
+
+    transition:var(--transicion);
+
+}
+
+.seccion:hover{
+
+    box-shadow:var(--sombra-card);
+
+}
+
+/*==============================
+TÍTULOS
+==============================*/
+
+.seccion h2{
+
+    margin-top:0;
+
+    margin-bottom:18px;
+
+    color:var(--color-primario);
+
+    font-size:22px;
+
+    border-bottom:2px solid #e8eef5;
+
+    padding-bottom:10px;
+
+}
+
+/*==============================
+CARD GENERAL
+==============================*/
+
+.card{
+
+    background:var(--color-card);
+
+    border-radius:12px;
+
+    padding:20px;
+
+    box-shadow:var(--sombra-card);
+
+    margin-bottom:20px;
+
+}
+
+.card:hover{
+
+    box-shadow:var(--sombra-hover);
+
+}
+
+/*==============================
+CARD RESUMEN
+==============================*/
+
+.cardResumen{
+
+    background:white;
+
+    border-left:5px solid var(--color-primario);
+
+    border-radius:10px;
+
+    padding:20px;
+
+    box-shadow:var(--sombra-card);
+
+}
+
+.cardResumen h3{
+
+    margin:0;
+
+    font-size:16px;
+
+}
+
+.cardResumen h2{
+
+    margin-top:10px;
+
+    font-size:28px;
+
+}
+
+/*==============================
+RESPONSIVE
+==============================*/
+
+@media(max-width:768px){
+
+    .formulario{
+
+        padding:18px;
+
+    }
+
+    .seccion{
+
+        padding:15px;
+
+    }
+
+}
+
+/*==================================================
+=      TARJETAS CON GRID
+==================================================*/
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(auto-fit,minmax(280px,1fr));
+
+    gap:20px;
+
+}
+
+
+/*==================================================
+=      CARD HOVER SUAVE
+==================================================*/
+
+.card{
+
+    transition:all .25s ease;
+
+}
+
+.card:hover{
+
+    transform:translateY(-3px);
+
+}
+
+
+/*==================================================
+=      CARD RESUMEN
+==================================================*/
+
+.cardResumen p{
+
+    margin:8px 0 0;
+
+    font-size:15px;
+
+    color:#555;
+
+    line-height:1.4;
+
+}
+
+
+/*==================================================
+=      TITULOS
+==================================================*/
+
+.tituloModulo{
+
+    margin-top:0;
+
+}
+
+.subTitulo{
+
+    margin-top:0;
+
+    margin-bottom:20px;
+
+}

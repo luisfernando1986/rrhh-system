@@ -1,0 +1,169 @@
+/*==================================================
+=              MENÚ DEL SISTEMA
+==================================================*/
+
+/*=========================================
+CONTENEDOR DEL MENÚ
+=========================================*/
+
+.menu-dashboard{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:25px;
+
+    align-items:stretch;
+
+}
+
+/*=========================================
+BOTONES DEL MENÚ
+=========================================*/
+
+.btn-menu{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    text-decoration:none;
+
+    background:var(--color-card);
+
+    color:var(--color-primario);
+
+    min-height:140px;
+
+    padding:25px;
+
+    border-radius:16px;
+
+    border-top:6px solid var(--color-primario);
+
+    box-shadow:var(--sombra-card);
+
+    transition:var(--transicion);
+
+    font-size:22px;
+
+    font-weight:700;
+
+    text-transform:uppercase;
+
+    line-height:1.5;
+
+    letter-spacing:.8px;
+
+}
+
+.btn-menu:hover{
+
+    background:var(--color-primario);
+
+    color:white;
+
+    transform:translateY(-6px);
+
+    box-shadow:var(--sombra-hover);
+
+}
+
+/*=========================================
+BOTÓN SALIR
+=========================================*/
+
+.btn-salir{
+
+    display:block;
+
+    width:260px;
+
+    margin:45px auto 0;
+
+    padding:15px;
+
+    text-align:center;
+
+    text-decoration:none;
+
+    background:var(--color-rojo);
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    border-radius:var(--radio);
+
+    transition:var(--transicion);
+
+}
+
+.btn-salir:hover{
+
+    background:#a81f1f;
+
+}
+
+/*=========================================
+RESPONSIVE
+=========================================*/
+
+@media(max-width:900px){
+
+    .menu-dashboard{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .menu-dashboard{
+
+        grid-template-columns:1fr;
+
+        gap:18px;
+
+    }
+
+    .btn-menu{
+
+        min-height:110px;
+
+        font-size:18px;
+
+        padding:18px;
+
+    }
+
+    .btn-salir{
+
+        width:100%;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .btn-menu{
+
+        min-height:95px;
+
+        font-size:16px;
+
+        border-radius:12px;
+
+    }
+
+}

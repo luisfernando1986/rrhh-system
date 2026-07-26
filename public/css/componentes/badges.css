@@ -1,0 +1,67 @@
+/*==================================================
+=              BADGES DEL SISTEMA
+==================================================*/
+
+.badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:6px 12px;
+
+    border-radius:20px;
+
+    font-size:12px;
+
+    font-weight:600;
+
+    white-space:nowrap;
+
+}
+
+/*==============================
+COLORES
+==============================*/
+
+.badge-primary{
+
+    background:#e8f1ff;
+
+    color:#1f4e79;
+
+}
+
+.badge-success{
+
+    background:#e8f5e9;
+
+    color:#2e7d32;
+
+}
+
+.badge-warning{
+
+    background:#fff8e1;
+
+    color:#f9a825;
+
+}
+
+.badge-danger{
+
+    background:#ffebee;
+
+    color:#c62828;
+
+}
+
+.badge-secondary{
+
+    background:#eceff1;
+
+    color:#546e7a;
+
+}

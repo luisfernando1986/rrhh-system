@@ -1,0 +1,1200 @@
+/*==================================================
+=              BAJAS MÉDICAS
+==================================================*/
+
+
+/*==================================================
+=              TÍTULOS PRINCIPALES
+==================================================*/
+
+.contenedor > h1{
+
+    margin:10px 0 25px;
+
+    padding:20px 25px;
+
+    background:linear-gradient(
+        135deg,
+        #0d3b66,
+        #1f4e79
+    );
+
+    color:#ffffff;
+
+    border-radius:14px;
+
+    text-align:center;
+
+    font-size:30px;
+
+    font-weight:800;
+
+    letter-spacing:1px;
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,.15);
+
+}
+
+
+/*==================================================
+=              SUBTÍTULO
+==================================================*/
+
+.subtitulo{
+
+    margin:20px 0;
+
+    color:#374151;
+
+    font-size:16px;
+
+    font-weight:600;
+
+}
+
+
+/*==================================================
+=              RESUMEN GENERAL
+==================================================*/
+
+#panelResumenGeneral{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap:20px;
+
+    margin-bottom:25px;
+
+}
+
+
+.cardGeneral{
+
+    background:#ffffff;
+
+    border-radius:15px;
+
+    padding:20px;
+
+    text-align:center;
+
+    border-top:5px solid #1f4e79;
+
+    box-shadow:
+        0 6px 18px rgba(0,0,0,.10);
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+
+}
+
+
+.cardGeneral:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.15);
+
+}
+
+
+.cardGeneral h3{
+
+    margin:0 0 10px;
+
+    color:#374151;
+
+    font-size:15px;
+
+    text-transform:uppercase;
+
+}
+
+
+.cardGeneral h2{
+
+    margin:0;
+
+    font-size:34px;
+
+    color:#1f4e79;
+
+}
+
+
+/*==================================================
+=              COLORES DEL RESUMEN
+==================================================*/
+
+.cardGeneral:nth-child(1){
+
+    border-top-color:#1f4e79;
+
+}
+
+.cardGeneral:nth-child(2){
+
+    border-top-color:#198754;
+
+}
+
+.cardGeneral:nth-child(3){
+
+    border-top-color:#f59e0b;
+
+}
+
+.cardGeneral:nth-child(4){
+
+    border-top-color:#dc3545;
+
+}
+
+
+/*==================================================
+=              BUSCADOR
+==================================================*/
+
+#buscarPersonal{
+
+    width:100%;
+
+    padding:14px 18px;
+
+    margin-bottom:18px;
+
+    border:2px solid #d1d5db;
+
+    border-radius:10px;
+
+    background:#ffffff;
+
+    color:#1f2937;
+
+    font-size:16px;
+
+    outline:none;
+
+    transition:
+        border-color .2s ease,
+        box-shadow .2s ease;
+
+}
+
+
+#buscarPersonal:focus{
+
+    border-color:#1f4e79;
+
+    box-shadow:
+        0 0 0 3px rgba(31,78,121,.15);
+
+}
+
+
+/*==================================================
+=              FILTROS
+==================================================*/
+
+#filtrosEstado{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+    margin-bottom:25px;
+
+}
+
+
+.filtro{
+
+    border:none;
+
+    border-radius:8px;
+
+    padding:11px 18px;
+
+    background:#e5e7eb;
+
+    color:#374151;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+}
+
+
+.filtro:hover{
+
+    transform:translateY(-1px);
+
+}
+
+
+.filtro.activo{
+
+    background:#1f4e79;
+
+    color:#ffffff;
+
+}
+
+
+/*==================================================
+=              CONTENEDOR PERSONAL
+==================================================*/
+
+.contenedorPersonal{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(auto-fill,minmax(280px,1fr));
+
+    gap:22px;
+
+    align-items:start;
+
+}
+
+
+/*==================================================
+=              TARJETA PERSONAL
+==================================================*/
+
+.cardPersonal{
+
+    background:#ffffff;
+
+    border-radius:16px;
+
+    padding:20px;
+
+    box-shadow:
+        0 6px 18px rgba(0,0,0,.12);
+
+    border:1px solid #e5e7eb;
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+
+}
+
+
+.cardPersonal:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+        0 12px 28px rgba(0,0,0,.16);
+
+}
+
+
+/*==================================================
+=              ENCABEZADO TARJETA
+==================================================*/
+
+.encabezadoCard{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:8px;
+
+}
+
+
+.grado{
+
+    font-size:20px;
+
+    font-weight:800;
+
+    color:#1f4e79;
+
+}
+
+
+.arma{
+
+    color:#6b7280;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    margin-bottom:10px;
+
+}
+
+
+/*==================================================
+=              ESTADO CIRCULAR
+==================================================*/
+
+.circuloEstado{
+
+    width:17px;
+
+    height:17px;
+
+    border-radius:50%;
+
+    flex-shrink:0;
+
+    border:3px solid #ffffff;
+
+    box-shadow:
+        0 0 0 2px rgba(0,0,0,.12);
+
+}
+
+
+.estado-verde{
+
+    background:#198754;
+
+}
+
+
+.estado-naranja{
+
+    background:#f59e0b;
+
+}
+
+
+.estado-rojo{
+
+    background:#dc3545;
+
+}
+
+
+/*==================================================
+=              NOMBRE
+==================================================*/
+
+.apellido{
+
+    margin:5px 0;
+
+    font-size:17px;
+
+    color:#111827;
+
+    text-transform:uppercase;
+
+}
+
+
+.nombre{
+
+    margin:0 0 15px;
+
+    font-size:23px;
+
+    color:#1f4e79;
+
+    text-transform:uppercase;
+
+}
+
+
+/*==================================================
+=              DATOS
+==================================================*/
+
+.dato{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:10px 12px;
+
+    background:#f3f6fa;
+
+    border-radius:8px;
+
+    color:#374151;
+
+}
+
+
+.tituloDato{
+
+    font-weight:800;
+
+    color:#1f4e79;
+
+}
+
+
+.cardPersonal hr{
+
+    border:none;
+
+    border-top:1px solid #e5e7eb;
+
+    margin:16px 0;
+
+}
+
+
+/*==================================================
+=              ESTADO MÉDICO
+==================================================*/
+
+.estadoTarjeta{
+
+    padding:10px;
+
+    border-radius:8px;
+
+    text-align:center;
+
+    color:#ffffff;
+
+    font-weight:800;
+
+    font-size:13px;
+
+    margin-bottom:15px;
+
+}
+
+
+.estadoTarjeta.estado-verde{
+
+    background:#198754;
+
+}
+
+
+.estadoTarjeta.estado-naranja{
+
+    background:#f59e0b;
+
+}
+
+
+.estadoTarjeta.estado-rojo{
+
+    background:#dc3545;
+
+}
+
+
+/*==================================================
+=              ESTADÍSTICAS
+==================================================*/
+
+.estadisticas{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+
+    margin-bottom:18px;
+
+}
+
+
+.filaDato{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:9px 10px;
+
+    background:#f8fafc;
+
+    border-radius:7px;
+
+    color:#374151;
+
+    font-size:14px;
+
+}
+
+
+.filaDato strong{
+
+    color:#1f4e79;
+
+    font-size:17px;
+
+}
+
+
+/*==================================================
+=              BOTONES
+==================================================*/
+
+.cardPersonal button,
+.cardAcciones button,
+#formBaja button{
+
+    width:100%;
+
+    border:none;
+
+    border-radius:9px;
+
+    padding:12px 16px;
+
+    background:#1f4e79;
+
+    color:#ffffff;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+}
+
+
+.cardPersonal button:hover,
+.cardAcciones button:hover,
+#formBaja button:hover{
+
+    background:#0d3b66;
+
+    transform:translateY(-1px);
+
+}
+
+
+/*==================================================
+=              DATOS DEL MILITAR
+==================================================*/
+
+#datosPersonal{
+
+    background:#ffffff;
+
+    border-radius:15px;
+
+    padding:25px;
+
+    margin-bottom:25px;
+
+    border-left:6px solid #1f4e79;
+
+    box-shadow:
+        0 6px 18px rgba(0,0,0,.12);
+
+}
+
+
+#datosPersonal h2{
+
+    margin:0 0 8px;
+
+    color:#1f4e79;
+
+    font-size:25px;
+
+}
+
+
+#datosPersonal h3{
+
+    margin:0 0 12px;
+
+    color:#111827;
+
+    font-size:20px;
+
+}
+
+
+#datosPersonal p{
+
+    margin:0;
+
+    color:#4b5563;
+
+    font-weight:600;
+
+}
+
+
+/*==================================================
+=              FORMULARIO
+==================================================*/
+
+#formBaja{
+
+    background:#ffffff;
+
+    padding:28px;
+
+    border-radius:15px;
+
+    box-shadow:
+        0 6px 20px rgba(0,0,0,.11);
+
+    margin-bottom:30px;
+
+}
+
+
+#formBaja label{
+
+    display:block;
+
+    margin:15px 0 7px;
+
+    color:#1f2937;
+
+    font-weight:700;
+
+}
+
+
+#formBaja input,
+#formBaja select,
+#formBaja textarea{
+
+    width:100%;
+
+    padding:12px 14px;
+
+    border:1px solid #cbd5e1;
+
+    border-radius:8px;
+
+    background:#ffffff;
+
+    color:#111827;
+
+    font-family:Arial, Helvetica, sans-serif;
+
+    font-size:15px;
+
+    outline:none;
+
+}
+
+
+#formBaja input:focus,
+#formBaja select:focus,
+#formBaja textarea:focus{
+
+    border-color:#1f4e79;
+
+    box-shadow:
+        0 0 0 3px rgba(31,78,121,.12);
+
+}
+
+
+#formBaja textarea{
+
+    min-height:100px;
+
+    resize:vertical;
+
+}
+
+
+#formBaja button{
+
+    margin-top:25px;
+
+    font-size:15px;
+
+    background:#198754;
+
+}
+
+
+#formBaja button:hover{
+
+    background:#146c43;
+
+}
+
+
+/*==================================================
+=              TÍTULOS DE SECCIÓN
+==================================================*/
+
+.tituloSeccion{
+
+    margin:25px 0 15px;
+
+    padding-bottom:10px;
+
+    border-bottom:2px solid #dbe3ec;
+
+    color:#1f4e79;
+
+    font-size:19px;
+
+}
+
+
+/*==================================================
+=              RESUMEN MÉDICO
+==================================================*/
+
+#resumenMedico{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:20px;
+
+    margin:20px 0 30px;
+
+}
+
+
+.cardResumen{
+
+    background:#ffffff;
+
+    padding:20px;
+
+    border-radius:13px;
+
+    text-align:center;
+
+    border-top:5px solid #1f4e79;
+
+    box-shadow:
+        0 5px 16px rgba(0,0,0,.10);
+
+}
+
+
+.cardResumen h3{
+
+    margin:0 0 10px;
+
+    color:#4b5563;
+
+    font-size:15px;
+
+}
+
+
+.cardResumen h2{
+
+    margin:0;
+
+    color:#1f4e79;
+
+    font-size:28px;
+
+}
+
+
+/*==================================================
+=              HISTORIAL
+==================================================*/
+
+.contenedorCards{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(auto-fit,minmax(320px,1fr));
+
+    gap:22px;
+
+}
+
+
+.cardBaja{
+
+    background:#ffffff;
+
+    border-radius:15px;
+
+    padding:22px;
+
+    box-shadow:
+        0 6px 18px rgba(0,0,0,.12);
+
+    border-left:6px solid #1f4e79;
+
+}
+
+
+.cardBaja h3{
+
+    margin:0 0 5px;
+
+    color:#1f4e79;
+
+    font-size:20px;
+
+}
+
+
+.cardBaja h4{
+
+    margin:0 0 15px;
+
+    color:#6b7280;
+
+    font-size:15px;
+
+}
+
+
+/*==================================================
+=              ESTADOS HISTORIAL
+==================================================*/
+
+.estado{
+
+    display:inline-block;
+
+    padding:8px 12px;
+
+    margin-bottom:15px;
+
+    border-radius:7px;
+
+    color:#ffffff;
+
+    font-size:12px;
+
+    font-weight:800;
+
+}
+
+
+.estadoNormal{
+
+    background:#198754;
+
+}
+
+
+.estadoCurso{
+
+    background:#f59e0b;
+
+}
+
+
+.estadoJunta{
+
+    background:#dc3545;
+
+}
+
+
+.estadoProgramada{
+
+    background:#1f4e79;
+
+}
+
+
+.cardBaja p{
+
+    margin:9px 0;
+
+    color:#374151;
+
+    line-height:1.45;
+
+}
+
+
+.cardBaja p strong{
+
+    color:#1f2937;
+
+}
+
+
+/*==================================================
+=              ACCIONES HISTORIAL
+==================================================*/
+
+.cardAcciones{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:10px;
+
+    margin-top:20px;
+
+}
+
+
+.cardAcciones button:first-child{
+
+    background:#1f4e79;
+
+}
+
+
+.cardAcciones button:last-child{
+
+    background:#dc3545;
+
+}
+
+
+.cardAcciones button:last-child:hover{
+
+    background:#b02a37;
+
+}
+
+
+/*==================================================
+=              HR
+==================================================*/
+
+.contenedor hr{
+
+    border:none;
+
+    border-top:1px solid #dbe3ec;
+
+    margin:30px 0;
+
+}
+
+
+/*==================================================
+=              RESPONSIVE TABLET
+==================================================*/
+
+@media(max-width:992px){
+
+    #panelResumenGeneral{
+
+        grid-template-columns:
+            repeat(2,1fr);
+
+    }
+
+    #resumenMedico{
+
+        grid-template-columns:
+            repeat(2,1fr);
+
+    }
+
+}
+
+
+/*==================================================
+=              RESPONSIVE CELULAR
+==================================================*/
+
+@media(max-width:768px){
+
+    .contenedor > h1{
+
+        font-size:22px;
+
+        padding:17px;
+
+    }
+
+
+    #panelResumenGeneral{
+
+        grid-template-columns:1fr;
+
+        gap:14px;
+
+    }
+
+
+    .cardGeneral{
+
+        padding:17px;
+
+    }
+
+
+    .cardGeneral h2{
+
+        font-size:28px;
+
+    }
+
+
+    #filtrosEstado{
+
+        display:grid;
+
+        grid-template-columns:1fr 1fr;
+
+    }
+
+
+    .filtro{
+
+        width:100%;
+
+        padding:10px 8px;
+
+        font-size:12px;
+
+    }
+
+
+    .contenedorPersonal{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    #datosPersonal{
+
+        padding:20px;
+
+    }
+
+
+    #datosPersonal h2{
+
+        font-size:21px;
+
+    }
+
+
+    #datosPersonal h3{
+
+        font-size:17px;
+
+    }
+
+
+    #formBaja{
+
+        padding:20px;
+
+    }
+
+
+    #resumenMedico{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .contenedorCards{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .cardBaja{
+
+        padding:18px;
+
+    }
+
+
+}
+
+
+/*==================================================
+=              CELULAR PEQUEÑO
+==================================================*/
+
+@media(max-width:480px){
+
+    .contenedor > h1{
+
+        font-size:19px;
+
+        letter-spacing:.5px;
+
+    }
+
+
+    #filtrosEstado{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .cardPersonal{
+
+        padding:17px;
+
+    }
+
+
+    .grado{
+
+        font-size:18px;
+
+    }
+
+
+    .nombre{
+
+        font-size:20px;
+
+    }
+
+
+    .cardAcciones{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    #formBaja input,
+    #formBaja select,
+    #formBaja textarea{
+
+        font-size:16px;
+
+    }
+
+}

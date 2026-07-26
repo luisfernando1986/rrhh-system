@@ -1,0 +1,162 @@
+/*==================================================
+=            TABLAS DEL SISTEMA
+==================================================*/
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    background:white;
+
+    box-shadow:
+
+        var(--sombra-card);
+
+}
+
+/*=========================================
+=            CABECERA
+=========================================*/
+
+thead{
+
+    background:
+
+        var(--color-primario);
+
+    color:white;
+
+}
+
+th{
+
+    padding:12px;
+
+    text-align:left;
+
+}
+
+/*=========================================
+=            CUERPO
+=========================================*/
+
+td{
+
+    padding:12px;
+
+    border-bottom:
+
+        1px solid
+
+        var(--color-borde);
+
+}
+
+/*=========================================
+=            HOVER
+=========================================*/
+
+tbody tr:hover{
+
+    background:
+
+        #f3f7fb;
+
+}
+/*==================================================
+=      TABLAS RESPONSIVAS
+==================================================*/
+
+.tableResponsive{
+
+    width:100%;
+
+    overflow-x:auto;
+
+}
+
+.tableResponsive table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+.tableResponsive::-webkit-scrollbar{
+
+    height:8px;
+
+}
+
+.tableResponsive::-webkit-scrollbar-thumb{
+
+    background:#bdbdbd;
+
+    border-radius:10px;
+
+}
+
+/*==================================================
+=      FILAS Y CELDAS
+==================================================*/
+
+tbody tr{
+
+    transition:background .2s ease;
+
+}
+
+th,
+td{
+
+    vertical-align:middle;
+
+}
+
+/*==================================================
+=      TABLAS COMPACTAS
+==================================================*/
+
+.tablaCompacta th,
+.tablaCompacta td{
+
+    padding:8px 10px;
+
+    font-size:14px;
+
+}
+
+/*==================================================
+=      CENTRAR COLUMNAS
+==================================================*/
+
+.centrado{
+
+    text-align:center;
+
+}
+
+/*==================================================
+=      RESPONSIVE EXTRA
+==================================================*/
+
+@media (max-width:768px){
+
+    table{
+
+        font-size:13px;
+
+    }
+
+    th,
+    td{
+
+        padding:10px 8px;
+
+    }
+
+}
+

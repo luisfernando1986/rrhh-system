@@ -1,0 +1,442 @@
+/*==================================================
+=             BOTONES DEL SISTEMA
+==================================================*/
+
+.btn,
+.btnGuardar,
+.btnEditar,
+.btnEliminar,
+.btnVolver,
+.btnProgramar,
+.btnVer,
+.btnBuscar,
+.btnExportar,
+.btnImprimir{
+
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    gap:8px;
+
+    min-width:140px;
+    height:42px;
+
+    padding:0 20px;
+
+    border:none;
+    border-radius:8px;
+
+    cursor:pointer;
+
+    font-size:14px;
+    font-weight:600;
+
+    text-decoration:none;
+
+    transition:all .25s ease;
+
+}
+
+/*==============================
+HOVER GENERAL
+==============================*/
+
+.btn:hover,
+.btnGuardar:hover,
+.btnEditar:hover,
+.btnEliminar:hover,
+.btnVolver:hover,
+.btnProgramar:hover,
+.btnVer:hover,
+.btnBuscar:hover,
+.btnExportar:hover,
+.btnImprimir:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:
+        0 8px 16px rgba(0,0,0,.20);
+
+}
+
+/*==============================
+GUARDAR
+==============================*/
+
+.btnGuardar{
+
+    background:#198754;
+    color:white;
+
+}
+
+.btnGuardar:hover{
+
+    background:#157347;
+
+}
+
+/*==============================
+EDITAR
+==============================*/
+
+.btnEditar{
+
+    background:#0d6efd;
+    color:white;
+
+}
+
+.btnEditar:hover{
+
+    background:#0b5ed7;
+
+}
+
+/*==============================
+ELIMINAR
+==============================*/
+
+.btnEliminar{
+
+    background:#dc3545;
+    color:white;
+
+}
+
+.btnEliminar:hover{
+
+    background:#bb2d3b;
+
+}
+
+/*==============================
+VOLVER
+==============================*/
+
+.btnVolver{
+
+    background:#6c757d;
+    color:white;
+
+}
+
+.btnVolver:hover{
+
+    background:#5c636a;
+
+}
+
+/*==============================
+PROGRAMAR
+==============================*/
+
+.btnProgramar{
+
+    background:#1f4e79;
+    color:white;
+
+}
+
+.btnProgramar:hover{
+
+    background:#173a5b;
+
+}
+
+/*==============================
+VER FICHA
+==============================*/
+
+.btnVer{
+
+    background:#0b5ed7;
+    color:white;
+
+}
+
+.btnVer:hover{
+
+    background:#094bac;
+
+}
+
+/*==============================
+BUSCAR
+==============================*/
+
+.btnBuscar{
+
+    background:#20c997;
+    color:white;
+
+}
+
+.btnBuscar:hover{
+
+    background:#1aa179;
+
+}
+
+/*==============================
+EXPORTAR
+==============================*/
+
+.btnExportar{
+
+    background:#6610f2;
+    color:white;
+
+}
+
+.btnExportar:hover{
+
+    background:#520dc2;
+
+}
+
+/*==============================
+IMPRIMIR
+==============================*/
+
+.btnImprimir{
+
+    background:#fd7e14;
+    color:white;
+
+}
+
+.btnImprimir:hover{
+
+    background:#d96b0d;
+
+}
+
+/*==============================
+RESPONSIVE
+==============================*/
+
+@media(max-width:768px){
+
+    .btn,
+    .btnGuardar,
+    .btnEditar,
+    .btnEliminar,
+    .btnVolver,
+    .btnProgramar,
+    .btnVer,
+    .btnBuscar,
+    .btnExportar,
+    .btnImprimir{
+
+        width:100%;
+        min-width:100%;
+
+    }
+
+}
+/*==================================================
+=      CONTENEDOR DE BOTONES
+==================================================*/
+
+.botones{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    gap:15px;
+
+    margin-top:20px;
+
+    flex-wrap:wrap;
+
+}
+
+@media(max-width:768px){
+
+    .botones{
+
+        flex-direction:column;
+
+    }
+
+}
+
+/*==================================================
+=          BOTONES NAVEGACIÓN FORMULARIOS
+==================================================*/
+
+
+/*=========================================
+SIGUIENTE
+=========================================*/
+
+.btnSiguiente{
+
+    background:var(--color-primario);
+
+    color:white;
+
+}
+
+
+.btnSiguiente:hover{
+
+    background:var(--color-secundario);
+
+}
+
+
+
+/*=========================================
+ANTERIOR
+=========================================*/
+
+.btnAnterior{
+
+    background:#6c757d;
+
+    color:white;
+
+}
+
+
+.btnAnterior:hover{
+
+    background:#5c636a;
+
+}
+
+
+
+/*=========================================
+FINALIZAR
+=========================================*/
+
+.btnFinalizar{
+
+    background:var(--color-verde);
+
+    color:white;
+
+}
+
+
+.btnFinalizar:hover{
+
+    background:#1b5e20;
+
+}
+
+/*==================================================
+=      GRUPOS DE BOTONES
+==================================================*/
+
+.botonesCentro{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+    margin-top:20px;
+
+}
+
+.botonesIzquierda{
+
+    display:flex;
+
+    justify-content:flex-start;
+
+    align-items:center;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+    margin-top:20px;
+
+}
+
+.botonesDerecha{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    align-items:center;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+    margin-top:20px;
+
+}
+
+/*==================================================
+=      BOTONES PEQUEÑOS
+==================================================*/
+
+.btnPequeno{
+
+    min-width:auto;
+
+    height:34px;
+
+    padding:0 12px;
+
+    font-size:13px;
+
+}
+
+/*==================================================
+=      BOTÓN DESHABILITADO
+==================================================*/
+
+.btn:disabled,
+button:disabled{
+
+    opacity:.6;
+
+    cursor:not-allowed;
+
+    transform:none;
+
+    box-shadow:none;
+
+}
+
+/*==================================================
+=      BOTONES RESPONSIVE
+==================================================*/
+
+@media(max-width:480px){
+
+    .btn,
+    .btnGuardar,
+    .btnEditar,
+    .btnEliminar,
+    .btnVolver,
+    .btnProgramar,
+    .btnVer,
+    .btnBuscar,
+    .btnExportar,
+    .btnImprimir{
+
+        height:40px;
+
+        font-size:13px;
+
+    }
+
+}
+

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>
+
+        Programar Vacación
+
+    </title>
+
+    <link
+    rel="stylesheet"
+    href="/css/sistema.css"> 
+    <link
+        rel="stylesheet"
+        href="/css/vacaciones.css">
+    <link
+        rel="stylesheet"
+        href="/css/layoutInstitucional.css">
+</head>
+
+<body>
+    <div class="logoUnidad">
+
+        <img
+            src="/images/escudo.jpeg"
+            alt="Escudo Unidad">
+
+    </div>
+
+<div class="contenedor">
+
+    <!-- ===================================== -->
+    <!-- TITULO -->
+    <!-- ===================================== -->
+
+    <div class="card">
+
+        <h1 class="tituloModulo">
+
+            Programación de Vacaciones
+
+        </h1>
+
+        <hr class="hrSistema">
+
+        <p>
+
+            Registro y programación anual de vacaciones del personal militar.
+
+        </p>
+
+    </div>
+
+    <!-- ===================================== -->
+    <!-- DATOS DEL MILITAR -->
+    <!-- ===================================== -->
+
+    <div class="card">
+
+        <h2 class="subTitulo">
+
+            Datos del Militar
+
+        </h2>
+
+        <div id="datosPersonal">
+
+        </div>
+
+    </div>
+
+    <!-- ===================================== -->
+    <!-- RESUMEN VACACIONAL -->
+    <!-- ===================================== -->
+
+    <div class="card">
+
+        <h2 class="subTitulo">
+
+            Resumen Vacacional
+
+        </h2>
+
+        <div
+            id="resumenVacacion"
+            class="grid4">
+
+        </div>
+
+    </div>
+
+    <!-- ===================================== -->
+    <!-- NUEVA PROGRAMACION -->
+    <!-- ===================================== -->
+
+    <div class="card">
+
+        <h2 class="subTitulo">
+
+            Nueva Programación
+
+        </h2>
+
+        <form
+            id="formVacacion"
+            class="formulario">
+
+            <div class="campo">
+
+            <div class="campo">
+
+                <label>
+
+                    Tipo
+
+                </label>
+
+                <select id="tipo">
+
+                    <option value="VACACION">
+
+                        VACACIÓN
+
+                    </option>
+
+                    <option value="PCV">
+
+                        PERMISO CUENTA VACACIÓN
+
+                    </option>
+
+                    <option value="COLECTIVA">
+
+                        COLECTIVA
+
+                    </option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+            <div class="campo">
+
+                <label>
+
+                    Fecha Inicio
+
+                </label>
+
+                <input
+                    type="date"
+                    id="fechaInicio">
+
+            </div>
+
+            <div class="campo">
+
+                <label>
+
+                    Fecha Fin
+
+                </label>
+
+                <input
+                    type="date"
+                    id="fechaFin">
+
+            </div>
+
+            <div class="campo">
+
+                <label>
+
+                    Observación
+
+                </label>
+
+                <textarea
+                    id="observacion">
+
+                </textarea>
+
+            </div>
+
+            </textarea>
+
+            <div class="fila">
+
+                <button
+                    type="submit"
+                    class="btn btnGuardar">
+
+                    Guardar Registro
+
+                </button>
+
+                <button
+                    type="button"
+                    class="btn btnVolver"
+                    onclick="history.back()">
+
+                    Volver
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+    <!-- ===================================== -->
+    <!-- HISTORIAL -->
+    <!-- ===================================== -->
+
+    <div class="card">
+
+        <h2 class="subTitulo">
+
+            Historial de Vacaciones
+
+        </h2>
+
+        <div class="tableResponsive">
+
+            <table id="tablaRegistros">
+
+                <thead>
+
+                    <tr>
+
+                        <th>Tipo</th>
+
+                        <th>Desde</th>
+
+                        <th>Hasta</th>
+
+                        <th>Días</th>
+
+                        <th>Estado</th>
+
+                        <th>Acciones</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="/js/programarVacacion.js"></script>
+<script src="/js/dashboardButton.js"></script>
+</body>
+
+</html>

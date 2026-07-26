@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>
+
+        Licencias
+
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="/css/sistema.css">
+
+    <link
+        rel="stylesheet"
+        href="/css/licencias.css">
+
+    <link
+        rel="stylesheet"
+        href="/css/layoutInstitucional.css">
+</head>
+
+<body>
+    <div class="logoUnidad">
+
+        <img
+            src="/images/escudo.jpeg"
+            alt="Escudo Unidad">
+
+    </div>
+
+<div class="contenedor">
+
+    <div class="card">
+
+        <h1 class="tituloModulo">
+
+            Módulo de Licencias
+
+        </h1>
+
+        <hr class="hrSistema">
+
+        <p>
+
+            Administración de licencias temporales del personal.
+
+        </p>
+
+    </div>
+
+    <div class="card">
+
+        <h2>
+
+            Funciones Disponibles
+
+        </h2>
+
+        <div class="fila">
+
+            <a
+                href="/licencias/registrar"
+                class="btn btnGuardar">
+
+                Registrar Licencia
+
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="card">
+        <div class="filtros">
+
+            <select id="filtroTipo">
+
+                <option value="">
+
+                    Todos los tipos
+
+                </option>
+
+                <option value="FALLECIMIENTO">
+
+                    Fallecimiento
+
+                </option>
+
+                <option value="CALAMIDAD">
+
+                    Calamidad
+
+                </option>
+
+                <option value="MATRIMONIO">
+
+                    Matrimonio
+
+                </option>
+
+                <option value="PATERNIDAD">
+
+                    Paternidad
+
+                </option>
+
+                <option value="MATERNIDAD">
+
+                    Maternidad
+
+                </option>
+
+                <option value="DJBR">
+
+                    DJBR
+
+                </option>
+
+            </select>
+
+            <input
+                type="text"
+                id="filtroNombre"
+                placeholder="Buscar personal...">
+
+        </div>
+        <div class="botones-filtro">
+
+
+            <div class="botones-filtro">
+
+                <button
+                    class="btn btnSecundario"
+                    onclick="mostrarTodasLicencias()">
+
+                    TOTAL LICENCIAS
+
+                </button>
+
+                <button
+                    class="btn btnPrimario"
+                    onclick="filtrarLicenciasActivas()">
+
+                    ACTIVAS
+
+                </button>
+
+                <button
+                    class="btn btnPeligro"
+                    onclick="filtrarLicenciasVencidas()">
+
+                    VENCIDAS
+
+                </button>
+
+            </div>
+
+
+
+        </div>
+        <h2>
+
+            Licencias Registradas
+
+        </h2>
+        <div class="dashboard-licencias cardsDashboard">
+
+
+                <div 
+                class="card-licencia filtro-card"
+                onclick="mostrarTodasLicencias()">
+
+                    <h3>Total Licencias</h3>
+
+                    <p id="totalLicencias">
+                        0
+                    </p>
+
+                </div>
+
+
+
+                <div 
+                class="card-licencia filtro-card"
+                onclick="filtrarLicenciasActivas()">
+
+                    <h3>Activas</h3>
+
+                    <p id="licenciasActivas">
+                        0
+                    </p>
+
+                </div>
+
+
+
+                <div 
+                class="card-licencia filtro-card"
+                onclick="filtrarLicenciasVencidas()">
+
+                    <h3>Vencidas</h3>
+
+                    <p id="licenciasVencidas">
+                        0
+                    </p>
+
+                </div>
+
+
+
+                <div 
+                class="card-licencia">
+
+                    <h3>
+                        Por Tipo
+                    </h3>
+
+                    <div id="licenciasPorTipo"></div>
+
+                </div>
+
+
+            </div>
+        <table
+            id="tablaLicencias"
+            class="tablaSistema">
+
+            <thead>
+
+                <tr>
+
+                    <th>
+
+                        Personal
+
+                    </th>
+
+                    <th>
+
+                        Tipo
+
+                    </th>
+
+                    <th>
+
+                        Inicio
+
+                    </th>
+
+                    <th>
+
+                        Fin
+
+                    </th>
+
+                    <th>
+
+                        Días
+
+                    </th>
+                    
+                    <th>
+
+                        Acciones
+
+                    </th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<script src="/js/licencias.js"></script>
+<script src="/js/dashboardButton.js"></script>
+</body>
+
+</html>

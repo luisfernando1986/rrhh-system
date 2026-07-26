@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Registro</title>
+
+    <link rel="stylesheet" href="/css/sistema.css">
+    <link rel="stylesheet" href="/css/layoutInstitucional.css">
+    <link rel="stylesheet" href="/css/personal.css">
+</head>
+
+<body>
+    <div class="logoUnidad">
+
+        <img
+            src="/images/escudo.jpeg"
+            alt="Escudo Unidad">
+
+    </div>
+
+<div class="contenedor">
+
+    <div class="card">
+
+        <h1 class="tituloModulo">
+            Registro de Usuario
+        </h1>
+
+        <hr class="hrSistema">
+
+        <form action="/api/auth/registro" method="POST">
+
+            <label>Nombre</label>
+            <input type="text" name="nombre" required>
+
+            <label>Correo</label>
+            <input type="email" name="correo" required>
+
+            <label>Contraseña</label>
+            <input type="password" name="password" required>
+
+            <br><br>
+
+            <button class="btn btnGuardar" type="submit">
+                Registrarse
+            </button>
+
+        </form>
+
+        <br>
+
+        <a href="/login">
+            Ya tengo cuenta
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>

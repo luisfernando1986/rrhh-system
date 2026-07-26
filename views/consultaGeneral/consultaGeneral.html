@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+
+        Consulta General del Personal
+
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="/css/consultaGeneral.css">
+
+    <link
+        rel="stylesheet"
+        href="/css/layoutInstitucional.css">
+</head>
+
+<body>
+    <div class="logoUnidad">
+
+        <img
+            src="/images/escudo.jpeg"
+            alt="Escudo Unidad">
+
+    </div>
+
+    <div class="contenedor">
+
+        <h1>
+
+            CONSULTA GENERAL DEL PERSONAL
+
+        </h1>
+
+        <p class="subtitulo">
+
+            Visualización general de toda la información registrada del personal.
+
+        </p>
+
+        <input
+            type="text"
+            id="buscar"
+            placeholder="Buscar por grado, nombre, CI, carnet militar, instituto...">
+
+        <div class="tablaResponsive">
+
+            <table id="tablaPersonal">
+
+                <thead>
+
+                    <tr>
+
+                        <!-- DATOS MILITARES -->
+
+                        <th>Grado</th>
+                        <th>Arma</th>
+                        <th>Nombres</th>
+                        <th>Apellido Paterno</th>
+                        <th>Apellido Materno</th>
+                        <!-- IDENTIFICACIÓN -->
+
+                        <th>C.I.</th>
+                        <th>Complemento</th>
+                        <th>Extensión</th>
+                        <th>Carnet Militar</th>
+                        <th>Carnet COSSMIL</th>
+                        
+                        <th>Instituto</th>
+                        <th>Año Egreso</th>
+                        <th>Años Servicio</th>
+                        <th>Antigüedad Grado</th>
+
+                        
+
+                        <!-- DATOS PERSONALES -->
+
+                        
+                        <th>Fecha Nacimiento</th>
+                        <th>Edad</th>
+                        <th>Lugar Nacimiento</th>
+                        <th>Departamento</th>
+                        <th>Provincia</th>
+                        <th>Localidad</th>
+
+                        <!-- CONTACTO -->
+
+                        <th>Estado Civil</th>
+                        <th>Domicilio</th>
+                        <th>Celular</th>
+                        <th>Teléfono</th>
+                        <th>Correo</th>
+
+                        <!-- DATOS MÉDICOS -->
+
+                        <th>Grupo Sang.</th>
+                        <th>Peso</th>
+                        <th>Estatura</th>
+                        <th>Alergias</th>
+
+                        <!-- FAMILIA -->
+
+                        <th>Padre</th>
+                        <th>Madre</th>
+                        <th>Domicilio Padres</th>
+                        <th>Esposa</th>
+                        <th>Hijos</th>
+
+                        <!-- DESTINOS -->
+
+                        <th>Destino Gestión Anterior</th>
+                        <th>Destino Hace 2 Gestiones</th>
+
+                        <!-- REGISTRO -->
+
+                        <th>Fecha Registro</th>
+
+                        <!-- ACCIONES -->
+
+                        <th>Acciones</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+    <script src="/js/consultaGeneral.js"></script>
+
+    <script src="/js/dashboardButton.js"></script>
+
+</body>
+
+</html>

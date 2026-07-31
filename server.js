@@ -58,8 +58,7 @@ app.use('/api/configuracion', require('./routes/configuracion'));
 // FRONTEND
 // ======================
 app.use(express.static(path.join(__dirname, 'public')));
-app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
-
+app.use('/uploads', express.static(path.join(__dirname, 'public', 'uploads')));
 // ======================
 // VISTAS HTML
 // ======================

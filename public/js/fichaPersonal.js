@@ -28,7 +28,8 @@ async function cargarFicha() {
         const persona =
             await respuesta.json();
         
-
+            console.log(persona);
+            console.log("Fotografía:", persona.fotografia);
         
         // ==========================
         // ENCABEZADO
